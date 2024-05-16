@@ -100,6 +100,7 @@ function Main() {
                                 </ul>
                             </li> */}
                             <li><Link to="/contact" onClick={() => setActive(false)}> Contact </Link></li>
+                            <li><Link to="/careers" onClick={() => setActive(false)}> Career </Link></li>
                         </ul>
                     </div>
 
@@ -221,6 +222,7 @@ function Main() {
                                                 </li> */}
                                                 {/* <li><Link to="#">Blog</Link></li> */}
                                                 <li><Link to="/contact">Contact</Link></li>
+                                                <li><Link to="/careers">Career</Link></li>
                                             </ul>
                                         </nav>
                                     </div>

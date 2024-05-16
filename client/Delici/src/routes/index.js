@@ -14,6 +14,7 @@ import Menufour from '../components/Menu/Menufour';
 import Book from '../components/Book/Main'
 import Hometwo from '../components/Headertwo/Main'
 import Homethree from '../components/Homethree/Homethree'
+import Career from '../components/Career/Main'
 
 function Index() {
 
@@ -48,6 +49,7 @@ function Index() {
         <Route path="/ourchefs" element={<Chefs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/reservation" element={<Book />} />
+        <Route path="/careers" element={<Career />} />
       </Routes>
       <Footer />
     </>
