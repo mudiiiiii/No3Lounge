@@ -1,7 +1,7 @@
 import React from 'react'
 import Bredcom from '../Bredcrumb/Main'
 import Book from '../../components/Menhome/Book'
-import Img from '../../assets/images/background/banner-image-3.jpg'
+import Img from '../../assets/images/03photos/food/1Z6A1114.jpg'
 
 function Main() {
   return (

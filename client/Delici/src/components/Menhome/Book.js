@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import bg5 from '../../assets/images/background/bg-5.png'
+import bg5 from '../../assets/images/03photos/logos/Wisemen Logo Black.png'
 import bg6 from '../../assets/images/background/bg-6.png'
 import toronto from '../../assets/images/resource/toronto.png'
 import paris from '../../assets/images/resource/paris.png'
@@ -12,15 +12,15 @@ function Book() {
         <>
             <section className="online-reservation inner-page">
                 <div className="left-bg"><img src={bg5} alt="" title="" /></div>
-                <div className="right-bg"><img src={bg6} alt="" title="" /></div>
+                {/* <div className="right-bg"><img src={bg6} alt="" title="" /></div> */}
                 <div className="auto-container">
                     <div className="title-box centered">
                         <div className="subtitle"><span>Reservation</span></div>
                         <div className="pattern-image"><img src={require('../../assets/images/icons/separator.svg').default} alt="" title="" /></div>
 
                         <h2>Book A Table</h2>
-                        <div className="text desc">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
-                        <div className="text request-info">Booking request <Link to="#">+88-123-123456</Link> or fill out the order form</div>
+                        <div className="text desc">Restaurant will be open for all days, All booking payment is secured with credit card, no charges will be apply for online booking. no refundable.</div>
+                        <div className="text request-info">Booking request <Link to="#">+234-coming-soon</Link> or fill out the order form</div>
                     </div>
                     <div className="default-form reservation-form">
                         <form method="post" action="/">
@@ -36,6 +36,9 @@ function Book() {
                                             <option>5 Person</option>
                                             <option>6 Person</option>
                                             <option>7 Person</option>
+                                            <option>8 Person</option>
+                                            <option>9 Person</option>
+                                            <option>10 or more Person</option>
                                         </select>
                                         <span className="arrow-icon far fa-angle-down"></span>
                                     </div>
@@ -78,7 +81,7 @@ function Book() {
                                 </span>
                             </button>
                         </form>
-                        <div className="powered-by">*Powered by OpenTable</div>
+                        {/* <div className="powered-by">*Powered by OpenTable</div> */}
                     </div>
                 </div>
 
@@ -88,17 +91,17 @@ function Book() {
                             <div className="row clearfix">
                                 <div className="reserv-col col-lg-8 col-md-12 col-sm-12">
                                     <div className="inner">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin" width="100%" height="600" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3964.0235196180947!2d3.3838336148358974!3d6.518706360090378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x103b8cfbe0dd4343%3A0x5dfece8f7a221bcd!2sUniversity%20Rd%2C%20Yaba%2C%20Lagos%20101245%2C%20Lagos%2C%20Nigeria!3m2!1d6.5177077!2d3.3842290999999998!5e0!3m2!1sen!2sca!4v1715819648149!5m2!1sen!2sca" width="100%" height="600" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                 </div>
                                 <div className="info-col col-lg-4 col-md-12 col-sm-12">
                                     <div className="inner">
                                         <div className="title">
-                                            <h2>New York</h2>
+                                            <h2>Lagos</h2>
                                         </div>
                                         <div className="data">
                                             <ul className="info">
-                                                <li><strong>Contact Us</strong><br />Restaurant St, Delicious City,<br /> London 9578, UK <br /> Call : +88-123-123456 <br /> Email : booking@domainname.com </li>
+                                                <li><strong>Contact Us</strong><br />#3 University Road, <br /> Akoka Lagos <br /> Call : +234-coming-soon <br /> Email : coming soon </li>
                                                 <div className="separator"><span></span></div>
                                                 <li><strong>Lunch Time</strong><br />Monday to Sunday <br />11.00 am - 2.30pm</li>
                                                 <li><strong>Dinner Time</strong><br />Monday to Sunday <br />05.00 pm - 10.00pm</li>
@@ -116,7 +119,7 @@ function Book() {
                     <div className="auto-container">
                         <div className="row clearfix">
 
-                            <div className="location-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            {/* <div className="location-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                 <div className="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                                     <div className="icon-box"><img src={ny} alt="" /></div>
                                     <h4>New York</h4>
@@ -153,7 +156,7 @@ function Book() {
                                     <div className="text">Restaurant St, Delicious City, CA <br /> +88-123-123456 <br /> booking@domainname.com</div>
                                     <div className="more-link"><Link to="#">get direction</Link></div>
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
