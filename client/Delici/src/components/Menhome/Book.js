@@ -23,7 +23,7 @@ function Book() {
                         <div className="text request-info">Booking request <Link to="#">+234-coming-soon</Link> or fill out the order form</div>
                     </div>
                     <div className="default-form reservation-form">
-                        <form method="post" action="/">
+                        <form method="post" action="/api/reserve">
                             <div className="row clearfix">
                                 <div className="form-group col-lg-4 col-md-6 col-sm-12">
                                     <div className="field-inner">
@@ -54,25 +54,60 @@ function Book() {
                                     <div className="field-inner">
                                         <span className="alt-icon far fa-clock"></span>
                                         <select className="l-icon">
-                                            <option>08 : 00 am</option>
-                                            <option>09 : 00 am</option>
-                                            <option>10 : 00 am</option>
-                                            <option>11 : 00 am</option>
-                                            <option>12 : 00 pm</option>
-                                            <option>01 : 00 pm</option>
-                                            <option>02 : 00 pm</option>
-                                            <option>03 : 00 pm</option>
                                             <option>04 : 00 pm</option>
+                                            <option>04 : 30 pm</option>
                                             <option>05 : 00 pm</option>
+                                            <option>05 : 30 pm</option>
                                             <option>06 : 00 pm</option>
+                                            <option>06 : 30 pm</option>
                                             <option>07 : 00 pm</option>
+                                            <option>07 : 30 pm</option>
                                             <option>08 : 00 pm</option>
+                                            <option>08 : 30 pm</option>
                                             <option>09 : 00 pm</option>
+                                            <option>09 : 30 pm</option>
                                             <option>10 : 00 pm</option>
+                                            <option>10 : 30 pm</option>
+                                            <option>11 : 00 pm</option>
+                                            <option>11 : 30 pm</option>
                                         </select>
                                         <span className="arrow-icon far fa-angle-down"></span>
                                     </div>
                                 </div>
+
+                                <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                          <span className="alt-icon far fa-user"></span>
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="   Your Name"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                          <span className="alt-icon far fa-envelope"></span>
+                            <input
+                              type="text"
+                              name="emailAddress"
+                              placeholder="   Email Address"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                          <span className="alt-icon far fa-phone"></span>
+                            <input
+                              type="text"
+                              name="phoneNumber"
+                              placeholder="   Phone Number"
+                              required
+                            />
+                          </div>
+                        </div>
                             </div>
                             <button type="submit" className="theme-btn btn-style-one clearfix">
                                 <span className="btn-wrap">
@@ -103,8 +138,7 @@ function Book() {
                                             <ul className="info">
                                                 <li><strong>Contact Us</strong><br />#3 University Road, <br /> Akoka Lagos <br /> Call : +234-coming-soon <br /> Email : coming soon </li>
                                                 <div className="separator"><span></span></div>
-                                                <li><strong>Lunch Time</strong><br />Monday to Sunday <br />11.00 am - 2.30pm</li>
-                                                <li><strong>Dinner Time</strong><br />Monday to Sunday <br />05.00 pm - 10.00pm</li>
+                                                <li><strong>Restaurant Time</strong><br />Monday to Sunday <br />04.00 pm - 12:00 am</li>
                                             </ul>
                                         </div>
                                     </div>

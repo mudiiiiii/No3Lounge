@@ -1,1 +1,5 @@
 /client/Delici/node_modules
+/backendServer/node_modules
+/backendServer/db.env
+/test.mongodb.js
+/backendServer/.env

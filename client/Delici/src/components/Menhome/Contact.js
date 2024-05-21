@@ -1,38 +1,43 @@
-import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import Bgtwo from '../../assets/images/03photos/food/1Z6A1114.jpg'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import author1 from '../../assets/images/resource/author-thumb-1.jpg'
-import author2 from '../../assets/images/resource/author-thumb-2.jpg'
-import author3 from '../../assets/images/resource/author-thumb-3.jpg'
-import SwiperCore, { Controller } from 'swiper';
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import Bgtwo from "../../assets/images/03photos/food/1Z6A1114.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import author1 from "../../assets/images/resource/author-thumb-1.jpg";
+import author2 from "../../assets/images/resource/author-thumb-2.jpg";
+import author3 from "../../assets/images/resource/author-thumb-3.jpg";
+import SwiperCore, { Controller } from "swiper";
+import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from 'react-datepicker';
 
 SwiperCore.use([Controller]);
 function Contact() {
+  const swiper1 = useRef(null);
+  const swiper2 = useRef(null);
+  const [date, setDate] = useState(new Date());
 
-    const swiper1 = useRef(null);
-    const swiper2 = useRef(null);
+  const [flag, setflag] = useState(false);
 
-    const [flag, setflag] = useState(false)
-
-    const slider2 = useRef()
-    const duration = 500;
-    const syncPosition = (e) => {
-        if (!flag) {
-            setflag(false)
-            if (slider2.current) {
-                slider2.current.to(e.item.index, duration)
-            }
-            setflag(false)
-        }
+  const slider2 = useRef();
+  const duration = 500;
+  const syncPosition = (e) => {
+    if (!flag) {
+      setflag(false);
+      if (slider2.current) {
+        slider2.current.to(e.item.index, duration);
+      }
+      setflag(false);
     }
+  };
 
-    return (
-        <>
-            <div className="testimonials-section" >
-                <div className="image-layer" style={{ backgroundImage: `url(${Bgtwo})` }}></div>
-                <div className="auto-container">
-                    {/* <div className="carousel-box owl-theme">
+  return (
+    <>
+      <div className="testimonials-section">
+        <div
+          className="image-layer"
+          style={{ backgroundImage: `url(${Bgtwo})` }}
+        ></div>
+        <div className="auto-container">
+          {/* <div className="carousel-box owl-theme">
                         <Swiper className="testi-top"
                             ref={swiper1}
                             controller={{ control: swiper2.current }}
@@ -106,128 +111,177 @@ function Contact() {
                                 </SwiperSlide >
                             </Swiper>
                         </div> */}
-                    {/* </div> */}
+          {/* </div> */}
+        </div>
+      </div>
+
+      <section className="reserve-section">
+        <div className="auto-container">
+          <div className="outer-box">
+            <div className="row clearfix">
+              <div className="reserv-col col-lg-8 col-md-12 col-sm-12">
+                <div className="inner">
+                  <div className="title">
+                    <h2>Online Reservation</h2>
+                    <div className="request-info">
+                      Booking request <Link to="#">+234-coming-soon</Link> or
+                      fill out the order form
+                    </div>
+                  </div>
+                  <div className="default-form reservation-form">
+                    <form method="post" action="/">
+                      <div className="row clearfix">
+                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                            <input
+                              type="text"
+                              name="fieldname"
+                              placeholder="Your Name"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                            <input
+                              type="text"
+                              name="fieldname"
+                              placeholder="Phone Number"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                            <input
+                              type="text"
+                              name="fieldname"
+                              placeholder="Email Address"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-4 col-md-6 col-sm-12">
+                          <div className="field-inner">
+                            <span className="alt-icon far fa-user"></span>
+                            <select className="l-icon">
+                              <option>1 Person</option>
+                              <option>2 Person</option>
+                              <option>3 Person</option>
+                              <option>4 Person</option>
+                              <option>5 Person</option>
+                              <option>6 Person</option>
+                              <option>7 Person</option>
+                              <option>8 Person</option>
+                              <option>9 Person</option>
+                              <option>10 or more Person</option>
+                            </select>
+                            <span className="arrow-icon far fa-angle-down"></span>
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-4 col-md-6 col-sm-12">
+                <div className="field-inner">
+                    {/* <span className="alt-icon far fa-calendar"></span> */}
+                    <DatePicker 
+                        selected={date} 
+                        onChange={(newDate) => setDate(newDate)} 
+                        dateFormat="dd-MM-yyyy"
+                        className="form-control"
+                    />
                 </div>
             </div>
-
-            <section className="reserve-section">
-                <div className="auto-container">
-                    <div className="outer-box">
-                        <div className="row clearfix">
-                            <div className="reserv-col col-lg-8 col-md-12 col-sm-12">
-                                <div className="inner">
-                                    <div className="title">
-                                        <h2>Online Reservation</h2>
-                                        <div className="request-info">Booking request <Link to="#">+234-coming-soon</Link> or fill out the order form</div>
-                                    </div>
-                                    <div className="default-form reservation-form">
-                                        <form method="post" action="/">
-                                            <div className="row clearfix">
-                                                <div className="form-group col-lg-6 col-md-6 col-sm-12">
-                                                    <div className="field-inner">
-                                                        <input type="text" name="fieldname" placeholder="Your Name" required />
-                                                    </div>
-                                                </div>
-                                                <div className="form-group col-lg-6 col-md-6 col-sm-12">
-                                                    <div className="field-inner">
-                                                        <input type="text" name="fieldname" placeholder="Phone Number" required />
-                                                    </div>
-                                                </div>
-                                                <div className="form-group col-lg-4 col-md-6 col-sm-12">
-                                                    <div className="field-inner">
-                                                        <span className="alt-icon far fa-user"></span>
-                                                        <select className="l-icon">
-                                                            <option>1 Person</option>
-                                                            <option>2 Person</option>
-                                                            <option>3 Person</option>
-                                                            <option>4 Person</option>
-                                                            <option>5 Person</option>
-                                                            <option>6 Person</option>
-                                                            <option>7 Person</option>
-                                                            <option>8 Person</option>
-                                                            <option>9 Person</option>
-                                                            <option>10 or more Person</option>
-                                                        </select>
-                                                        <span className="arrow-icon far fa-angle-down"></span>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group col-lg-4 col-md-6 col-sm-12">
-                                                    <div className="field-inner">
-                                                        <span className="alt-icon far fa-calendar"></span>
-                                                        <input className="l-icon datepicker" type="text" name="fieldname" placeholder="DD-MM-YYYY" required readOnly />
-                                                        <span className="arrow-icon far fa-angle-down"></span>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group col-lg-4 col-md-12 col-sm-12">
-                                                    <div className="field-inner">
-                                                        <span className="alt-icon far fa-clock"></span>
-                                                        <select className="l-icon">
-                                                            <option>08 : 00 am</option>
-                                                            <option>09 : 00 am</option>
-                                                            <option>10 : 00 am</option>
-                                                            <option>11 : 00 am</option>
-                                                            <option>12 : 00 pm</option>
-                                                            <option>01 : 00 pm</option>
-                                                            <option>02 : 00 pm</option>
-                                                            <option>03 : 00 pm</option>
-                                                            <option>04 : 00 pm</option>
-                                                            <option>05 : 00 pm</option>
-                                                            <option>06 : 00 pm</option>
-                                                            <option>07 : 00 pm</option>
-                                                            <option>08 : 00 pm</option>
-                                                            <option>09 : 00 pm</option>
-                                                            <option>10 : 00 pm</option>
-                                                        </select>
-                                                        <span className="arrow-icon far fa-angle-down"></span>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group col-lg-12 col-md-12 col-sm-12">
-                                                    <div className="field-inner">
-                                                        <textarea name="fieldname" placeholder="Message" required></textarea>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group col-lg-12 col-md-12 col-sm-12">
-                                                    <div className="field-inner">
-
-                                                        <button type="submit" className="theme-btn btn-style-one clearfix">
-                                                            <span className="btn-wrap">
-                                                                <span className="text-one">book a table</span>
-                                                                <span className="text-two">book a table</span>
-                                                            </span>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="info-col col-lg-4 col-md-12 col-sm-12">
-                                <div className="inner">
-                                    <div className="title">
-                                        <h2>Contact Us</h2>
-                                    </div>
-                                    <div className="data">
-                                        <div className="booking-info">
-                                            <div className="bk-title">Booking request</div>
-                                            <div className="bk-no"><Link to="tel:+88-123-123456">+234-coming-soon</Link></div>
-                                        </div>
-                                        <div className="separator"><span></span></div>
-                                        <ul className="info">
-                                            <li><strong>Location</strong><br />#3 University Road, Akoka Lagos</li>
-                                            <li><strong>Lunch Time</strong><br />Monday to Sunday <br />11.00 am - 2.30pm</li>
-                                            <li><strong>Dinner Time</strong><br />Monday to Sunday <br />05.00 pm - 10.00pm</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="form-group col-lg-4 col-md-12 col-sm-12">
+                          <div className="field-inner">
+                            <span className="alt-icon far fa-clock"></span>
+                            <select className="l-icon">
+                              <option>04 : 00 pm</option>
+                              <option>04 : 30 pm</option>
+                              <option>05 : 00 pm</option>
+                              <option>05 : 30 pm</option>
+                              <option>06 : 00 pm</option>
+                              <option>06 : 30 pm</option>
+                              <option>07 : 00 pm</option>
+                              <option>07 : 30 pm</option>
+                              <option>08 : 00 pm</option>
+                              <option>08 : 30 pm</option>
+                              <option>09 : 00 pm</option>
+                              <option>09 : 30 pm</option>
+                              <option>10 : 00 pm</option>
+                              <option>10 : 30 pm</option>
+                              <option>11 : 00 pm</option>
+                              <option>11 : 30 pm</option>
+                            </select>
+                            <span className="arrow-icon far fa-angle-down"></span>
+                          </div>
                         </div>
-                    </div>
+                        <div className="form-group col-lg-12 col-md-12 col-sm-12">
+                          <div className="field-inner">
+                            <textarea
+                              name="fieldname"
+                              placeholder="Give us your details for your planned event, requirements, and any other information required."
+                              required
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div className="form-group col-lg-12 col-md-12 col-sm-12">
+                          <div className="field-inner">
+                            <button
+                              type="submit"
+                              className="theme-btn btn-style-one clearfix"
+                            >
+                              <span className="btn-wrap">
+                                <span className="text-one">book a table</span>
+                                <span className="text-two">book a table</span>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-            </section>
-        </>
-    )
+              </div>
+              <div className="info-col col-lg-4 col-md-12 col-sm-12">
+                <div className="inner">
+                  <div className="title">
+                    <h2>Contact Us</h2>
+                  </div>
+                  <div className="data">
+                    <div className="booking-info">
+                      <div className="bk-title">Booking request</div>
+                      <div className="bk-no">
+                        <Link to="tel:+88-123-123456">+234-coming-soon</Link>
+                      </div>
+                    </div>
+                    <div className="separator">
+                      <span></span>
+                    </div>
+                    <ul className="info">
+                      <li>
+                        <strong>Location</strong>
+                        <br />
+                        #3 University Road, Akoka Lagos
+                      </li>
+                      <li>
+                        <strong>Restaurant Time</strong>
+                        <br />
+                        Monday to Sunday <br />
+                        4.00 pm - 12:00am
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
-export default Contact
+export default Contact;
