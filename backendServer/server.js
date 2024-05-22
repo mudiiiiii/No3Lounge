@@ -1,18 +1,25 @@
 require('dotenv').config();
 const express = require("express");
-
+const path = require('path');
 const app = express();
 
-const dbConfig = require('./db');
+require('./db');
+const bodyParser = require('body-parser');
+const reservationRoutes = require('./routes/reservationRoutes');
+const applicationRoutes = require('./routes/applicationRoutes');
+const cors = require('cors');
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use('/api', reservationRoutes);  
+app.use('/api', applicationRoutes); 
 
-const cors = require('cors');
-app.use(cors());
+// Serve static files from the React app in production
+app.use(express.static(path.join(__dirname, '../client/Delici/build')));
 
-const port = process.env.PORT || 5000;
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/Delici/build', 'index.html'));
+});
 
-
-
-app.listen(port, () => console.log('Server is now running '));
+const port = process.env.PORT || 5000; // Can be set through an environment variable for flexibility
+app.listen(port, () => console.log(`Server is now running on http://localhost:${port}`));

@@ -7,7 +7,7 @@ mongoose.connect(MONGO_URI, {useUnifiedTopology : true, useNewUrlParser:true})
 
 var connection = mongoose.connection
 
-console.log("Mongo URI: ", MONGO_URI);
+//console.log("Mongo URI: ", MONGO_URI);
 
 connection.on('error', ()=>{
     console.log('Mongo DB Connection failed')

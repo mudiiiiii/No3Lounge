@@ -24,7 +24,7 @@ function Contactbanner() {
                   </div>
                 </div>
                 <div className="default-form reservation-form">
-                  <form method="post" action="/" encType="multipart/form-data">
+                  <form method="post" action="api/apply" encType="multipart/form-data">
                     <div className="clearfix">
                     <div className="form-group">
                         <div className="field-inner">
