@@ -4,7 +4,7 @@ import Offer from '../Menhome/Offer'
 import Story from '../Menhome/Story'
 import Specialdish from '../Menhome/Specialdish'
 import Menusection from '../Menhome/Menusection'
-import Whyus from '../Menhome/Whyus'
+// import Whyus from '../Menhome/Whyus'
 import Teem from '../Menhome/Teem'
 import Reacntupdate from '../Menhome/Recntupdates'
 import Special from '../Menhome/Special'
@@ -84,7 +84,7 @@ function Homethree() {
             <Menusection />
             <Special />
             <Contact />
-            <Whyus />
+            {/* <Whyus /> */}
             <Teem />
             <Videosection />
             <Reacntupdate />

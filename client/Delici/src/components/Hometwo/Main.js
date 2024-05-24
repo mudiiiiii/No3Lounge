@@ -4,13 +4,14 @@ import Offer from '../Menhome/Offer'
 import Story from '../Menhome/Story'
 import Specialdish from '../Menhome/Specialdish'
 import Menusection from '../Menhome/Menusection'
-import Whyus from '../Menhome/Whyus'
+// import Whyus from '../Menhome/Whyus'
 import Teem from '../Menhome/Teem'
 import Reacntupdate from '../Menhome/Recntupdates'
 import Special from '../Menhome/Special'
 import Contact from '../Menhome/Contact'
 import Videosection from '../Menhome/Videosection'
-import Feature from '../Menhome/Feature'
+import { Link } from 'react-router-dom'
+import sidebarlogo from '../../assets/images/resource/sidebar-logo.png'
 
 function Main() {
     return (
@@ -83,8 +84,8 @@ function Main() {
             <Menusection />
             <Special />
             <Contact />
-            <Whyus />
-            <Feature />
+            {/* <Whyus /> */}
+            {/* <Feature /> */}
             <Teem />
             <Videosection />
             <Reacntupdate />

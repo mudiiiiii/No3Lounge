@@ -30,14 +30,6 @@ function Main({ subtitle, Img, title }) {
             data-wow-delay="0ms"
             data-wow-duration="1500ms"
           >
-            <div className="link">
-              <Link to="/#" className="theme-btn btn-style-two clearfix">
-                <span className="btn-wrap">
-                  <span className="text-one">job openings</span>
-                  <span className="text-two">job openings</span>
-                </span>
-              </Link>
-            </div>
           </div>
           </div>
           

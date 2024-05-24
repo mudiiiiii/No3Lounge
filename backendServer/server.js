@@ -7,12 +7,14 @@ require('./db');
 const bodyParser = require('body-parser');
 const reservationRoutes = require('./routes/reservationRoutes');
 const applicationRoutes = require('./routes/applicationRoutes');
+const feedbackRoutes = require('./routes/feedbackRoutes');
 const cors = require('cors');
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api', reservationRoutes);  
 app.use('/api', applicationRoutes); 
+app.use('/api', feedbackRoutes);
 
 // Serve static files from the React app in production
 app.use(express.static(path.join(__dirname, '../client/Delici/build')));

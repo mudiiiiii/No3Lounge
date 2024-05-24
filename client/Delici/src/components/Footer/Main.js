@@ -56,6 +56,7 @@ function Main() {
                                         <li> <Link to="/ourchefs">Gallery</Link></li>
                                         <li> <Link to="/contact">Contact</Link></li>
                                         <li> <Link to="/careers">Career</Link></li>
+                                        <li> <Link to="/feedback">Feedback</Link></li>
                                     </ul>
                                 </div>
                             </div>

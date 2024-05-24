@@ -15,6 +15,7 @@ import Book from '../components/Book/Main'
 import Hometwo from '../components/Headertwo/Main'
 import Homethree from '../components/Homethree/Homethree'
 import Career from '../components/Career/Main'
+import Feedback from '../components/Feedback/Main'
 
 function Index() {
 
@@ -50,6 +51,7 @@ function Index() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/reservation" element={<Book />} />
         <Route path="/careers" element={<Career />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
       <Footer />
     </>
