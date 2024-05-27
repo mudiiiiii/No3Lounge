@@ -6,8 +6,8 @@ import five from '../../assets/images/03photos/food/1Z6A0721.jpg'
 import six from '../../assets/images/03photos/food/1Z6A0702.jpg'
 import seven from '../../assets/images/03photos/food/1Z6A1069.jpg'
 import eight from '../../assets/images/03photos/food/1Z6A1029.jpg'
-import nine from '../../assets/images/resource/menu-image-9.png'
-import ten from '../../assets/images/resource/menu-image-10.png'
+import nine from '../../assets/images/03photos/food/1Z6A0979.jpg'
+import ten from '../../assets/images/03photos/food/1Z6A0729.jpg'
 import eleven from '../../assets/images/03photos/food/1Z6A1139.jpg'
 import twelve from '../../assets/images/03photos/food/1Z6A0787.jpg'
 import thirteen from '../../assets/images/03photos/food/1Z6A0862.jpg'
@@ -69,9 +69,10 @@ Served with our special sweet chili sauce.</Link></div>
 
                                             <div className="dish-block">
                                                 <div className="inner-box">
-                                                    {/* <div className="dish-image"><Link to="#"><img src={seven} alt="" /></Link></div> */}
-                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">coming soon</Link></h5></div><div className="price"></div></div>
-                                                    <div className="text desc"><Link to="#">coming soon coming soon coming soon coming soon coming soon coming soon</Link></div>
+                                                    <div className="dish-image"><Link to="#"><img src={ten} alt="" /></Link></div>
+                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">Crispy Wings</Link></h5></div><div className="price"></div></div>
+                                                    <div className="text desc"><Link to="#">Well marinated and breaded chicken wings, served with an option of our special chili sauce or
+creamy mayonnaise.</Link></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -131,7 +132,7 @@ fresh lettuce and melted mozzarella cheese, Severed with French fries and chili 
 
                                             <div className="dish-block">
                                                 <div className="inner-box">
-                                                    <div className="dish-image"><Link to="#"><img src={seven} alt="" /></Link></div>
+                                                    <div className="dish-image"><Link to="#"><img src={nine} alt="" /></Link></div>
                                                     <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">Grilled Croaker Fish</Link></h5></div><div className="price"></div></div>
                                                     <div className="text desc"><Link to="#">Well marinated croaker fish in hot and spicy pepper sauce, served with sweet potatoe fries or
 yam chips.</Link></div>
@@ -302,8 +303,8 @@ satay, wings, meat croquette, chicken croquette, and French fries.</Link></div>
                         <div className="link-box">
                             <Link to="/menuone" className="theme-btn btn-style-two clearfix">
                                 <span className="btn-wrap">
-                                    <span className="text-one">view all menu</span>
-                                    <span className="text-two">view all menu</span>
+                                    <span className="text-one">view full menu</span>
+                                    <span className="text-two">view full menu</span>
                                 </span>
                             </Link>
                             <Link to="/#" className="theme-btn btn-style-two clearfix">
