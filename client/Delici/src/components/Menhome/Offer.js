@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import offerimg1 from '../../assets/images/03photos/food/1Z6A0862.jpg'
 import offerimg2 from '../../assets/images/03photos/food/1Z6A1006.jpg'
 import offerimg3 from '../../assets/images/03photos/drinks/1Z6A0876.jpg'
+import drinkpdf from '../../assets/pdf/New Drink menu 2024.pdf';
+import entreepdf from '../../assets/pdf/New Food menu 2024.pdf';
+import apppdf from '../../assets/pdf/New Food menu 2024.pdf';
 
 function Offer() {
 
@@ -12,25 +15,25 @@ function Offer() {
     {
       image: offerimg1,
       title: 'Appetizers',
-      link: '/menuone'
+      link: `${apppdf}`,
+      internal: false
     },
     {
       image: offerimg2,
       title: 'Entree',
-      link: '/menuone'
+      link: `${entreepdf}#page=4`,
+      internal: false
     },
     {
       image: offerimg3,
-      title: 'Drinks',
-      link: '/menuone'
+      title: 'Desserts & Drinks',
+      link: drinkpdf
     }
   ];
 
   return (
     <>
       <section className="we-offer-section">
-        {/* <div className="left-bot-bg"><img src={bg1} alt="" title="" /></div>
-        <div className="right-top-bg"><img src={bg2} alt="" title="" /></div> */}
         <div className="auto-container">
           <div className="title-box centered">
             <div className="subtitle"><span>Flavors for royalty</span></div>
@@ -44,15 +47,34 @@ function Offer() {
             {offers.map((offer, index) => (
               <div key={index} className="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div className="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay={`${index * 300}ms`}>
-                  <div className="image"><Link to="#"><img src={offer.image} alt="" /></Link></div>
-                  <h3><Link to="#">{offer.title}</Link></h3>
-                  <div className="more-link"><Link to="/menuone">view menu</Link></div>
+                  <div className="image">
+                    {offer.internal ? (
+                      <Link to={offer.link}><img src={offer.image} alt="" /></Link>
+                    ) : (
+                      <a href={offer.link} target="_blank" rel="noopener noreferrer"><img src={offer.image} alt="" /></a>
+                    )}
+                  </div>
+                  <h3>
+                    {offer.internal ? (
+                      <Link to={offer.link}>{offer.title}</Link>
+                    ) : (
+                      <a href={offer.link} target="_blank" rel="noopener noreferrer">{offer.title}</a>
+                    )}
+                  </h3>
+                  <div className="more-link">
+                    {offer.internal ? (
+                      <Link to={offer.link}>view menu</Link>
+                    ) : (
+                      <a href={offer.link} target="_blank" rel="noopener noreferrer">view menu</a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
     </>
   )
 }

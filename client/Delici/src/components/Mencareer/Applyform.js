@@ -27,15 +27,18 @@ function Contactbanner() {
                   <form method="post" action="api/apply" encType="multipart/form-data">
                     <div className="clearfix">
                     <div className="form-group">
-                        <div className="field-inner">
-                          <input
-                            type="text"
-                            name="job"
-                            placeholder="Position"
-                            required=""
-                          />
-                        </div>
-                      </div>
+    <div className="field-inner">
+        <select name="job" required>
+            <option value="">Select Position</option>
+            <option value="manager"> Assistant Manager</option>
+            <option value="chef">Chef</option>
+            <option value="waiter">Sous Chef</option>
+            <option value="hostess">Waiter</option>
+            <option value="bartender">Bartender</option>
+        </select>
+    </div>
+</div>
+
                       <div className="form-group">
                         <div className="field-inner">
                           <input

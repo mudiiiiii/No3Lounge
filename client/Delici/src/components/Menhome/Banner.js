@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Slidethree from '../../assets/images/03photos/food/1Z6A1109.jpg';
 import Slidetwo from '../../assets/images/03photos/food/1Z6A1114.jpg';
 import Slideone from '../../assets/images/03photos/food/1Z6A1106.jpg';
+import pdfFile from '../../assets/pdf/Full Pdf.pdf';
 import bookicon1 from '../../assets/images/resource/book-icon-1.png';
 import 'swiper/swiper.min.css';
 import SwiperCore, { Navigation } from 'swiper';
@@ -41,12 +42,13 @@ function Banner() {
                                                     <div className="text">From mouthwatering food to handcrafted drinks & signature cocktails</div>
                                                     <div className="links-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                                                         <div className="link">
-                                                            <Link to="/menuone" className="theme-btn btn-style-two clearfix">
-                                                                <span className="btn-wrap">
-                                                                    <span className="text-one">view our menu</span>
-                                                                    <span className="text-two">view our menu</span>
-                                                                </span>
-                                                            </Link>
+                                                        <a href={pdfFile} target="_blank" className="theme-btn btn-style-two clearfix" rel='noopener noreferrer'>
+    <span className="btn-wrap">
+        <span className="text-one">view our menu</span>
+        <span className="text-two">view our menu</span>
+    </span>
+</a>
+
                                                             <Link to="/reservation" className="theme-btn btn-style-two clearfix">
                                                                 <span className="btn-wrap">
                                                                     <span className="text-one">book a table</span>

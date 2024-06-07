@@ -57,8 +57,7 @@ function Aboutsec() {
                         <div className="about-block info-block col-xl-4 col-lg-4 col-md-12 col-sm-12">
                             <div className="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
                                 <ul className="info">
-                                    <li><strong>Lunch Time</strong>Monday to Sunday <br />11.00 am - 2.30pm</li>
-                                    <li><strong>Dinner Time</strong>Monday to Sunday <br />5.30 pm - 11.30 pm</li>
+                                    <li><strong>Opening Time</strong>Monday to Sunday <br />4.00 pm - 12.00am</li>
                                     <li className="separator"><span></span></li>
                                     <li><strong>Contact Us</strong><span className="address">#3 University Road, Akoka Lagos</span> <Link to="tel:+88-123-123456">+234-coming-soon</Link> <br /><Link to="mailto:reservation@restro.com">coming soon</Link></li>
                                 </ul>

@@ -32,6 +32,7 @@ import menuimgtwentysix from '../../assets/images/03photos/drinks/1Z6A0918.jpg';
 import menuimgtwentyseven from '../../assets/images/03photos/food/1Z6A1146.jpg';
 import menuimgtwentyeight from '../../assets/images/03photos/drinks/1Z6A0945.jpg';
 import menuimgtwentynine from '../../assets/images/03photos/drinks/1Z6A0988.jpg';
+import pdfFile from '../../assets/pdf/Full Pdf.pdf';
 
 
 
@@ -513,12 +514,12 @@ function Special() {
               <span className="fal fa-angle-right"></span>
             </div>
             <div className="lower-link-box text-center">
-              <Link to="#" className="theme-btn btn-style-two clearfix">
-                <span className="btn-wrap">
-                  <span className="text-one">view all menu</span>
-                  <span className="text-two">view all menu</span>
-                </span>
-              </Link>
+            <a href={pdfFile} target="_blank" className="theme-btn btn-style-two clearfix" rel='noopener noreferrer'>
+    <span className="btn-wrap">
+        <span className="text-one">view our menu</span>
+        <span className="text-two">view our menu</span>
+    </span>
+</a>
             </div>
           </div>
         </div>

@@ -3,3 +3,4 @@
 /backendServer/db.env
 /test.mongodb.js
 /backendServer/.env
+/admin/admin/node_modules

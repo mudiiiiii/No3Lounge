@@ -21,7 +21,7 @@ function Main() {
                                                 <li>#3 University Road, Akoka Lagos</li>
                                                 <li><Link to="mailto:booking@domainname.com">coming soon</Link></li>
                                                 <li><Link to="tel:+88-123-123456">Booking Request : +234-coming-soon</Link></li>
-                                                <li>Open : 09:00 am - 01:00 pm</li>
+                                                <li>Open : 04:00 pm - 12:00 am</li>
                                             </ul>
                                         </div>
                                         <div className="separator"><span></span><span></span><span></span></div>
@@ -51,7 +51,6 @@ function Main() {
                                 <div className="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                     <ul className="links">
                                         <li> <Link to="/">Home</Link></li>
-                                        <li> <Link to="/menuone">Menus</Link></li>
                                         <li> <Link to="/about">About us</Link></li>
                                         <li> <Link to="/ourchefs">Gallery</Link></li>
                                         <li> <Link to="/contact">Contact</Link></li>

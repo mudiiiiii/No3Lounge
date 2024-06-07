@@ -23,8 +23,8 @@ function Contactbanner() {
 
                                 <div className="contactinfo-block col-lg-4 col-md-4 col-sm-12">
                                     <div className="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                                        <h4>Lunch Time</h4>
-                                        <div className="text"> Monday to Sunday <br /> 11.00 am - 2.30pm</div>
+                                        <h4>Opening Hours</h4>
+                                        <div className="text"> Monday to Sunday <br /> 4.00 pm - 12.00am</div>
                                     </div>
                                 </div>
 
@@ -34,14 +34,6 @@ function Contactbanner() {
                                         <h4>Contact Info</h4>
                                         <div className="text">#3 University Road, Akoka Lagos<br />Email : coming soon</div>
                                         <div className="more-link"><Link to="#">Booking : +234-coming-soon</Link></div>
-                                    </div>
-                                </div>
-
-
-                                <div className="contactinfo-block col-lg-4 col-md-4 col-sm-12">
-                                    <div className="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
-                                        <h4>Dinner Time</h4>
-                                        <div className="text">Monday to Sunday<br />5.30 pm - 11.30 pm</div>
                                     </div>
                                 </div>
 

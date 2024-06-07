@@ -77,7 +77,7 @@ function Main() {
                                 </ul>
                             </li> */}
                             <li><Link to="/" onClick={() => setActive(false)}>Home</Link></li>
-                            <li><Link to="/menuone" onClick={() => setActive(false)}>Menu</Link></li>
+                            {/* <li><Link to="/menuone" onClick={() => setActive(false)}>Menu</Link></li> */}
                             <li><Link to="/about" onClick={() => setActive(false)}>About Us</Link></li>
                             <li><Link to="/ourchefs" onClick={() => setActive(false)}>Gallery</Link></li>
                             {/* <li className="dropdown"><Link to="/" onClick={() => setPage(page === true ? false : true)}>Pages<button type="button" className="btn-expander"><i className="far fa-angle-down"></i></button></Link>
@@ -107,7 +107,7 @@ function Main() {
                     <h2>Visit Us</h2>
                     <ul className="info">
                         <li>#3 University Road, <br /> Akoka Lagos </li>
-                        <li>Open: 9.30 am - 2.30pm</li>
+                        <li>Open: 4.00 pm - 12.00 am</li>
                         <li><Link to="mailto:booking@domainame.com">coming soon</Link></li>
                     </ul>
                     <div className="separator"><span></span></div>
@@ -126,7 +126,7 @@ function Main() {
                                 <div className="top-left clearfix">
                                     <ul className="top-info clearfix">
                                         <li><i className="icon far fa-map-marker-alt"></i> #3 University Road, Akoka Lagos</li>
-                                        <li><i className="icon far fa-clock"></i> Daily : 8.00 am to 10.00 pm</li>
+                                        <li><i className="icon far fa-clock"></i> Daily : 4.00 pm to 12.00 am</li>
                                     </ul>
                                 </div>
                                 <div className="top-right clearfix">
@@ -202,7 +202,7 @@ function Main() {
                                                     </ul>
                                                 </li> */}
                                                 <li><Link to="/">Home</Link></li>
-                                                <li><Link to="/menuone">Menu</Link></li>
+                                                {/* <li><Link to="/menuone">Menu</Link></li> */}
                                                 <li><Link to="/about">About Us</Link></li>
                                                 <li><Link to="/ourchefs">Gallery</Link></li>
                                                 {/* <li className="dropdown"><Link to="/">Pages</Link>
@@ -230,7 +230,7 @@ function Main() {
                                 </div>
 
                                 <div className="link link-btn">
-                                    <Link to="/reservation" className="theme-btn btn-style-one clearfix">
+                                    <Link to="https://no3lounge.africa.restaurant/" className="theme-btn btn-style-one clearfix">
                                         <span className="btn-wrap">
                                             <span className="text-one">order now</span>
                                             <span className="text-two">order now</span>
