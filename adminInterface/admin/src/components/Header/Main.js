@@ -50,69 +50,21 @@ function Main() {
 
     return (
         <>
-            {active &&
-            <div className="menu-backdrop" style={{ opacity: "1", visibility: "visible" }} onClick={() => setActive(false)}></div>}
+            {/* {active &&
+            <div className="menu-backdrop" style={{ opacity: "1", visibility: "visible" }} onClick={() => setActive(false)}></div>} */}
             <section className={`hidden-bar ${active && "visible-sidebar"}`} onClick={() => setActive(false)} >
                 <div className="inner-box">
-                    <div className="cross-icon hidden-bar-closer" onClick={() => setActive(false)} ><span className="far fa-close"> </span></div>
+                    {/* <div className="cross-icon hidden-bar-closer" onClick={() => setActive(false)} ><span className="far fa-close"> </span></div> */}
                     <div className="logo-box"><Link to="/" title="No3 Lounge"><img src={logo} alt="" title="No3 Lounge" />
                     </Link></div>
 
                     <div className="side-menu">
                         <ul className="navigation clearfix">
-                            {/* <li className="current dropdown"><Link to="#" onClick={() => setShow(show === true ? false : true)}>Home<button type="button" className="btn-expander"><i className="far fa-angle-down"></i></button></Link>
-                                <ul style={{ display: show ? "block" : "none" }}>
-                                    <li><Link to="/" onClick={() => setActive(false)}>Home 1 Left Header</Link></li>
-                                    <li><Link to="/hometwo" onClick={() => setActive(false)}>Home 1 Center Header</Link></li>
-                                    <li><Link to="/homethree" onClick={() => setActive(false)}>Home 3 Video Hero</Link></li>
-                                </ul>
-                            </li> */}
-                            {/* <li className="dropdown"><Link to="#" onClick={() => setMenu(menu === true ? false : true)} >Menus<button type="button" className="btn-expander"><i className="far fa-angle-down"></i></button></Link>
-                                <ul style={{ display: menu ? "block" : "none" }}>
-                                    <li><Link to="/menuone" onClick={() => setActive(false)}>Menu List 1</Link></li>
-                                    <li><Link to="/menutwo" onClick={() => setActive(false)}>Menu List 2</Link></li>
-                                    <li><Link to="/menuthree" onClick={() => setActive(false)}>Menu List 3</Link></li>
-                                    <li><Link to="/menufour" onClick={() => setActive(false)}>Menu List 4</Link></li>
-                                </ul>
-                            </li> */}
-                            <li><Link to="/" onClick={() => setActive(false)}>Home</Link></li>
-                            {/* <li><Link to="/menuone" onClick={() => setActive(false)}>Menu</Link></li> */}
-                            <li><Link to="/about" onClick={() => setActive(false)}>About Us</Link></li>
-                            <li><Link to="/ourchefs" onClick={() => setActive(false)}>Gallery</Link></li>
-                            {/* <li className="dropdown"><Link to="/" onClick={() => setPage(page === true ? false : true)}>Pages<button type="button" className="btn-expander"><i className="far fa-angle-down"></i></button></Link>
-                                <ul style={{ display: page ? "block" : "none" }}>
-                                    <li><Link to="/menuone" onClick={() => setActive(false)}>Dropdown Menu 1</Link></li>
-                                    <li><Link to="/menutwo" onClick={() => setActive(false)}>Dropdown Menu 2</Link></li>
-                                    <li><Link to="/menuthree" onClick={() => setActive(false)}>Dropdown Menu 3</Link></li>
-                                    <li className="dropdown">
-                                        <Link to="#" onClick={() => setDrop(drop === true ? false : true)}>Dropdown Menu 4<button type="button" className="btn-expander">
-                                            <i className="far fa-angle-down"></i>
-                                        </button>
-                                        </Link>
-                                        <ul style={{ display: drop ? "block" : "none" }}>
-                                            <li><Link to="#" onClick={() => setActive(false)}>Dropdown Menu level 2</Link></li>
-                                            <li><Link to="#" onClick={() => setActive(false)}>Dropdown Menu level 2</Link></li>
-                                            <li><Link to="#" onClick={() => setActive(false)}>Dropdown Menu Level 3</Link></li>
-                                        </ul>
-                                    </li>
-                                    <li><Link to="#" onClick={() => setActive(false)}> Dropdown Lorem 5 </Link></li>
-                                </ul>
-                            </li> */}
-                            <li><Link to="/contact" onClick={() => setActive(false)}> Contact </Link></li>
-                            <li><Link to="/careers" onClick={() => setActive(false)}> Career </Link></li>
+                            <li><Link to="/applications" onClick={() => setActive(false)}>Applications</Link></li>
+                            <li><Link to="/reservations" onClick={() => setActive(false)}>Reservations</Link></li>
+                            <li><Link to="/feedbacks" onClick={() => setActive(false)}>Feedbacks</Link></li>
+                            
                         </ul>
-                    </div>
-
-                    <h2>Visit Us</h2>
-                    <ul className="info">
-                        <li>#3 University Road, <br /> Akoka Lagos </li>
-                        <li>Open: 4.00 pm - 12.00 am</li>
-                        <li><Link to="mailto:booking@domainame.com">coming soon</Link></li>
-                    </ul>
-                    <div className="separator"><span></span></div>
-                    <div className="booking-info">
-                        <div className="bk-title">Booking request</div>
-                        <div className="bk-no"><Link to="tel:+88-123-123456">+234-coming-soon</Link></div>
                     </div>
 
                 </div>
@@ -123,18 +75,6 @@ function Main() {
                 <div className="header-top">
                     <div className="auto-container">
                         <div className="inner clearfix">
-                            <div className="top-left clearfix">
-                                <ul className="top-info clearfix">
-                                    <li><i className="icon far fa-map-marker-alt"></i> #3 University Road, Akoka Lagos</li>
-                                    <li><i className="icon far fa-clock"></i> Daily : 4.00 pm to 12.00 am</li>
-                                </ul>
-                            </div>
-                            <div className="top-right clearfix">
-                                <ul className="top-info clearfix">
-                                    <li><Link to="tel:+11234567890"><i className="icon far fa-phone"></i> +234-coming-soon </Link> </li>
-                                    <li><Link to="mailto:booking@restaurant.com"><i className="icon far fa-envelope"></i> coming soon</Link></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,10 +141,10 @@ function Main() {
                                                     </li>
                                                 </ul>
                                             </li> */}
-                                            <li><Link to="/">Home</Link></li>
+                                            {/* <li><Link to="/">Home</Link></li> */}
                                             {/* <li><Link to="/menuone">Menu</Link></li> */}
-                                            <li><Link to="/about">About Us</Link></li>
-                                            <li><Link to="/ourchefs">Gallery</Link></li>
+                                            {/* <li><Link to="/about">About Us</Link></li>
+                                            <li><Link to="/ourchefs">Gallery</Link></li> */}
                                             {/* <li className="dropdown"><Link to="/">Pages</Link>
                                                 <ul>
                                                     <li> <Link to="#">Dropdown Menu 1</Link></li>
@@ -221,21 +161,12 @@ function Main() {
                                                 </ul>
                                             </li> */}
                                             {/* <li><Link to="#">Blog</Link></li> */}
-                                            <li><Link to="/contact">Contact</Link></li>
-                                            <li><Link to="/careers">Career</Link></li>
+                                            {/* <li><Link to="/contact">Contact</Link></li>
+                                            <li><Link to="/careers">Career</Link></li> */}
                                         </ul>
                                     </nav>
                                 </div>
 
-                            </div>
-
-                            <div className="link link-btn">
-                                <Link to="https://no3lounge.africa.restaurant/" className="theme-btn btn-style-one clearfix">
-                                    <span className="btn-wrap">
-                                        <span className="text-one">order now</span>
-                                        <span className="text-two">order now</span>
-                                    </span>
-                                </Link>
                             </div>
 
                         </div>

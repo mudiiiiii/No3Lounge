@@ -6,6 +6,17 @@ const router = express.Router();
 const applications = require('../models/applications');
 
 
+// Get all applications
+router.get('/applications', async (req, res) => {
+    try {
+        const application = await applications.find();
+        res.json(application);
+    } catch (err) {
+        console.error(err); // Log the error to the console/server logs
+        res.status(500).send('Server error occurred');
+    }
+});
+
 // // Set up storage for file uploads
 // const storage = multer.diskStorage({
 //     destination: function(req, file, cb) {

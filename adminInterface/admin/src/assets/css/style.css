@@ -291,6 +291,25 @@
   cursor: pointer;
 }
 
+/* Feedback.css */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures that the border is neat */
+}
+
+th, td {
+  border: 1px solid #ccc; /* Adds borders around table cells */
+  padding: 8px; /* Adds space inside each cell */
+  text-align: left; /* Aligns text to the left */
+}
+
+thead {
+  background-color: #020202; /* Light grey background for the header */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #090909; /* Zebra striping for rows */
+}
 
 
 

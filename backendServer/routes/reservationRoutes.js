@@ -2,6 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Reservation = require('../models/reservations');  // Ensure path correctness based on your project structure
 
+// GET request
+router.get('/reservations', async (req, res) => {
+    try {
+        const reservations = await Reservation.find();
+        res.json(reservations);
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
 // Route to handle POST request for new reservations
 router.post('/reserve', async (req, res) => {
     try {

@@ -2,6 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Feedback = require('../models/feedbacks'); // Adjust the path as necessary
 
+// GET feedback
+router.get('/feedbacks', async (req, res) => {
+    try {
+        const feedbacks = await Feedback.find();
+        res.json(feedbacks);
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+
 // POST feedback
 router.post('/feedback', async (req, res) => {
     try {
