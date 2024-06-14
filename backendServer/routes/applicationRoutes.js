@@ -30,12 +30,11 @@ router.get('/applications', async (req, res) => {
 const upload = multer({ storage: multer.memoryStorage() });
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    //service: 'gmail',  // This example uses Gmail. Adjust as necessary for your service provider.
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
     auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASSWORD // Your email password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD
     }
 });
 
@@ -49,15 +48,15 @@ router.post('/apply', upload.single('cv'), async (req, res) => {
     const { file } = req;
 
     const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: process.env.TO_USER, 
-        replyTo: email, 
-        subject: `New Job Application for ${job}`,
-        text: `A new job application has been submitted.\n\nDetails:\nPosition: ${job}\nFirst Name: ${first_name}\nLast Name: ${last_name}\nEmail: ${email}\nPhone: ${phone}\nPrevious Role: ${previous_role}\nYears Worked: ${years_worked}\nSummary of Work: ${work_summary}`,
+        from: process.env.EMAIL_USER, // Sender address, 
+        to: process.env.EMAIL_USER, // Recipient address, 
+        replyTo: email, // Customer's email for direct replies
+        subject: `New Job Application for ${job}`, // Subject line
+        text: `A new job application has been submitted.\n\nDetails:\nPosition: ${job}\nFirst Name: ${first_name}\nLast Name: ${last_name}\nEmail: ${email}\nPhone: ${phone}\nPrevious Role: ${previous_role}\nYears Worked: ${years_worked}\nSummary of Work: ${work_summary}`, // Plain text body
         attachments: [
             {
-                filename: file.originalname,
-                content: file.buffer
+                filename: file.originalname, // Name of the file uploaded by the customer
+                content: file.buffer // Actual file content in memory
             }
         ]
     };

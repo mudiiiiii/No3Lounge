@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import bg5 from '../../assets/images/03photos/logos/Wisemen Logo Black.png'
 import bg6 from '../../assets/images/background/bg-6.png'
@@ -8,6 +8,26 @@ import dubai from '../../assets/images/resource/dubai.png'
 import ny from '../../assets/images/resource/ny.png'
 
 function Book() {
+    const [date, setDate] = useState('');  // State to hold the date input
+
+    const handleDateChange = (event) => {
+        const input = event.target.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+        let formattedInput = '';
+        
+        if (input.length > 4) {
+            formattedInput += input.slice(0, 4); // Year
+            if (input.length > 6) {
+                formattedInput += '-' + input.slice(4, 6); // Month
+                formattedInput += '-' + input.slice(6, 8); // Day
+            } else if (input.length > 4) {
+                formattedInput += '-' + input.slice(4); // Month so far
+            }
+        } else {
+            formattedInput = input; // Only year so far
+        }
+        
+        setDate(formattedInput);
+    };
     return (
         <>
             <section className="online-reservation inner-page">
@@ -19,7 +39,7 @@ function Book() {
                         <div className="pattern-image"><img src={require('../../assets/images/icons/separator.svg').default} alt="" title="" /></div>
 
                         <h2>Book A Table</h2>
-                        <div className="text desc">Restaurant will be open for all days, All booking payment is secured with credit card, no charges will be apply for online booking. no refundable.</div>
+                        <div className="text desc">Restaurant will be open for all days, All booking payment is secured with credit card, no refundable.</div>
                         <div className="text request-info">Booking request <Link to="#">+234-coming-soon</Link> or fill out the order form</div>
                     </div>
                     <div className="default-form reservation-form">
@@ -46,8 +66,15 @@ function Book() {
                                 <div className="form-group col-lg-4 col-md-6 col-sm-12">
                                     <div className="field-inner">
                                         <span className="alt-icon far fa-calendar"></span>
-                                        <input className="l-icon datepicker" type="text" name="fieldname" value="" placeholder="DD-MM-YYYY" required readOnly />
-                                        <span className="arrow-icon far fa-angle-down"></span>
+                                        <input
+                                            className="l-icon"
+                                            type="text"
+                                            name="date"
+                                            placeholder="YYYY-MM-DD"
+                                            value={date}
+                                            onChange={handleDateChange}
+                                            required
+                                        />
                                     </div>
                                 </div>
                                 <div className="form-group col-lg-4 col-md-12 col-sm-12">
