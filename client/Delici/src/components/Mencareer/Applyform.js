@@ -3,7 +3,7 @@ import bg25 from "../../assets/images/03photos/logos/Wisemen Logo Black.png";
 // import bg6 from '../../assets/images/03'
 import restro from "../../assets/images/03photos/food/1Z6A1109.jpg";
 
-function Contactbanner() {
+function Applyform() {
   return (
     <>
       <section className="contact-page">
@@ -24,7 +24,7 @@ function Contactbanner() {
                   </div>
                 </div>
                 <div className="default-form reservation-form">
-                  <form method="post" action="api/apply" encType="multipart/form-data">
+                  <form method="post" action="https://no3lounge-9eeef24429d5.herokuapp.com/api/apply" encType="multipart/form-data">
                     <div className="clearfix">
                     <div className="form-group">
     <div className="field-inner">
@@ -155,4 +155,4 @@ function Contactbanner() {
   );
 }
 
-export default Contactbanner;
+export default Applyform;

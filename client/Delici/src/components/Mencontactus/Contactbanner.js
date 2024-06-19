@@ -6,6 +6,30 @@ import bg25 from '../../assets/images/03photos/logos/Wisemen Logo Black.png'
 import restro from '../../assets/images/03photos/food/1Z6A1109.jpg'
 
 function Contactbanner() {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+    
+        try {
+          const response = await fetch('https://no3lounge-9eeef24429d5.herokuapp.com/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
+    
+          if (response.ok) {
+            alert('Your inquiry has been sent successfully!');
+          } else {
+            alert('Failed to send your inquiry.');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('An error occurred while sending your inquiry.');
+        }
+      };
     return (
         <>
             <div className="contact-map">
@@ -52,27 +76,27 @@ function Contactbanner() {
                                     <div className="text desc">Have a question about the our service? We're here to help, contact us today</div>
                                 </div>
                                 <div className="default-form reservation-form">
-                                    <form method="post" action="/">
+                                <form onSubmit={handleSubmit} encType="multipart/form-data">
                                         <div className="clearfix">
                                             <div className="form-group">
                                                 <div className="field-inner">
-                                                    <input type="text" name="fieldname" placeholder="Your Name" required="" />
+                                                    <input type="text" name="name" placeholder="Your Name" required="" />
                                                 </div>
                                             </div>
                                             <div className="form-group">
                                                 <div className="field-inner">
-                                                    <input type="text" name="fieldname" placeholder="Your Email" required="" />
+                                                    <input type="text" name="email" placeholder="Your Email" required="" />
                                                 </div>
                                             </div>
                                             <div className="form-group ">
                                                 <div className="field-inner">
-                                                    <input type="text" name="fieldname" placeholder="Phone Number" required="" />
+                                                    <input type="text" name="number" placeholder="Phone Number" required="" />
                                                 </div>
                                             </div>
 
                                             <div className="form-group ">
                                                 <div className="field-inner">
-                                                    <textarea name="fieldname" placeholder="Special Request" required=""></textarea>
+                                                    <textarea name="message" placeholder="Special Request" required=""></textarea>
                                                 </div>
                                             </div>
 

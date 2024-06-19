@@ -34,7 +34,7 @@ function Feedbackbanner(){
     console.log("Submitting form data:", formData);
 
     try {
-        const response = await fetch('/api/feedback', { // Adjust the API endpoint as needed
+        const response = await fetch('https://no3lounge-9eeef24429d5.herokuapp.com/api/feedback', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -42,10 +42,10 @@ function Feedbackbanner(){
             body: JSON.stringify(formData)
         });
         if (response.ok) {
-            setSuccessMessage('Feedback submitted successfully!');
+          alert('Your feedback has been submitted. Thank you!');
             setTimeout(() => {
-                history('/'); // Redirect to the homepage after 2 seconds
-            }, 2000);
+                history('/'); // Redirect to the homepage after 10 seconds
+            }, 10000);
         } else {
             const errorText = await response.text();  // Assuming the server sends a plain text error message
     throw new Error('Failed to submit feedback: ' + errorText);
