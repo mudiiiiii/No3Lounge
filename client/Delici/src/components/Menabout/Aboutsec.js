@@ -35,7 +35,7 @@ function Aboutsec() {
                                 {/* <div className="signature"><img src={signatureone} alt="" title="" /></div> */}
                                 <div className="author">edward otojareri - director</div>
                                 <div className="video-box">
-                                    <div className="image"><Link to="https://www.youtube.com/watch?v=ZETY_l3GVQg" className="lightbox-image"><img src={aboutimgtwo} alt="" /></Link>
+                                    <div className="image"><Link to="https://youtu.be/hSUz2ki6vwk" className="lightbox-image"><img src={aboutimgtwo} alt="" /></Link>
                                         <Link to="#" className="lightbox-image play-btn" onClick={() => setVideo(true)}>
                                             <span className="icon fal fa-play">
                                                 <i className="ripple"></i>

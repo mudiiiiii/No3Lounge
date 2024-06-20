@@ -89,7 +89,20 @@ function Videosection() {
                             <div className="fancybox-stage">
                                 <div className="fancybox-slide fancybox-slide--iframe fancybox-slide--video fancybox-slide--current fancybox-slide--complete">
                                     <div className="fancybox-content">
-                                        <Iframe id="fancybox-frame1671797716315" name="fancybox-frame1671797716315" className="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allowtransparency="true" src="//www.youtube.com/embed/ZETY_l3GVQg?autoplay=1&amp;autohide=1&amp;fs=1&amp;rel=0&amp;hd=1&amp;wmode=transparent&amp;enablejsapi=1&amp;html5=1" scrolling="no"></Iframe>
+                                    <Iframe
+  id="fancybox-frame1671797716315"
+  name="fancybox-frame1671797716315"
+  className="fancybox-iframe"
+  frameBorder="0"
+  vspace="0"
+  hspace="0"
+  webkitAllowFullScreen=""
+  mozAllowFullScreen=""
+  allowFullScreen=""
+  allowTransparency="true"
+  src="https://www.youtube.com/embed/hSUz2ki6vwk?autoplay=1&autohide=1&fs=1&rel=0&hd=1&wmode=transparent&enablejsapi=1&html5=1"
+  scrolling="no"
+/>
                                     </div>
                                 </div>
                             </div>

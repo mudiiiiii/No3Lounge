@@ -1,16 +1,37 @@
 import React from "react";
 import bg25 from "../../assets/images/03photos/logos/Wisemen Logo Black.png";
-// import bg6 from '../../assets/images/03'
 import restro from "../../assets/images/03photos/food/1Z6A1109.jpg";
 
 function Applyform() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    try {
+      const response = await fetch('https://no3lounge-9eeef24429d5.herokuapp.com/api/apply', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        alert('Your application has been submitted successfully!');
+        event.target.reset(); // Optional: Reset the form after successful submission
+      } else {
+        const errorText = await response.text();
+        throw new Error('Failed to submit application: ' + errorText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred while submitting your application.');
+    }
+  };
+
   return (
     <>
       <section className="contact-page">
         <div className="left-bg">
           <img src={bg25} alt="" title="" />
         </div>
-        {/* <div className="right-bg"><img src={bg6} alt="" title="" /></div> */}
 
         <div className="auto-container">
           <div className="c-page-form-box">
@@ -19,25 +40,24 @@ function Applyform() {
                 <div className="title-box centered">
                   <h2>Apply here</h2>
                   <div className="text desc">
-                    Please fill out the form and a member of the team will reach
-                    out to you{" "}
+                    Please fill out the form and a member of the team will reach out to you
                   </div>
                 </div>
                 <div className="default-form reservation-form">
-                  <form method="post" action="https://no3lounge-9eeef24429d5.herokuapp.com/api/apply" encType="multipart/form-data">
+                  <form onSubmit={handleSubmit} encType="multipart/form-data">
                     <div className="clearfix">
-                    <div className="form-group">
-    <div className="field-inner">
-        <select name="job" required>
-            <option value="">Select Position</option>
-            <option value="manager"> Assistant Manager</option>
-            <option value="chef">Chef</option>
-            <option value="waiter">Sous Chef</option>
-            <option value="hostess">Waiter</option>
-            <option value="bartender">Bartender</option>
-        </select>
-    </div>
-</div>
+                      <div className="form-group">
+                        <div className="field-inner">
+                          <select name="job" required>
+                            <option value="">Select Position</option>
+                            <option value="manager">Assistant Manager</option>
+                            <option value="chef">Chef</option>
+                            <option value="waiter">Sous Chef</option>
+                            <option value="hostess">Waiter</option>
+                            <option value="bartender">Bartender</option>
+                          </select>
+                        </div>
+                      </div>
 
                       <div className="form-group">
                         <div className="field-inner">
@@ -45,7 +65,7 @@ function Applyform() {
                             type="text"
                             name="first_name"
                             placeholder="Your First Name"
-                            required=""
+                            required
                           />
                         </div>
                       </div>
@@ -55,7 +75,7 @@ function Applyform() {
                             type="text"
                             name="last_name"
                             placeholder="Your Last Name"
-                            required=""
+                            required
                           />
                         </div>
                       </div>
@@ -65,7 +85,7 @@ function Applyform() {
                             type="email"
                             name="email"
                             placeholder="Your Email"
-                            required=""
+                            required
                           />
                         </div>
                       </div>
@@ -75,15 +95,13 @@ function Applyform() {
                             type="text"
                             name="phone"
                             placeholder="Phone Number"
-                            required=""
+                            required
                           />
                         </div>
                       </div>
 
                       <div className="form-group experience-section">
-                        <h3 className="section-title">
-                          Professional Experience
-                        </h3>
+                        <h3 className="section-title">Professional Experience</h3>
                         <div className="experience-block">
                           <div className="field-inner">
                             <label htmlFor="previous_role">Previous Role</label>
@@ -92,7 +110,7 @@ function Applyform() {
                               id="previous_role"
                               name="previous_role"
                               placeholder="Previous Job Title"
-                              required=""
+                              required
                             />
                           </div>
                           <div className="field-inner">
@@ -103,18 +121,16 @@ function Applyform() {
                               name="years_worked"
                               placeholder="Number of Years"
                               min="0"
-                              required=""
+                              required
                             />
                           </div>
                           <div className="field-inner">
-                            <label htmlFor="work_summary">
-                              Summary of Work
-                            </label>
+                            <label htmlFor="work_summary">Summary of Work</label>
                             <textarea
                               id="work_summary"
                               name="work_summary"
                               placeholder="Describe your responsibilities and achievements"
-                              required=""
+                              required
                             ></textarea>
                           </div>
                         </div>
@@ -133,9 +149,7 @@ function Applyform() {
                           className="theme-btn btn-style-one clearfix"
                         >
                           <span className="btn-wrap">
-                            <span className="text-one">
-                              Send Your Application
-                            </span>
+                            <span className="text-one">Send Your Application</span>
                           </span>
                         </button>
                       </div>

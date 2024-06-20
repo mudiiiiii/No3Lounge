@@ -26,7 +26,7 @@ function Banner() {
                 <div className="banner-slider">
                     <div className="swiper-wrapper">
                         {[Slideone, Slidetwo, Slidethree].map((image, index) => (
-                            <SwiperSlide key={index} className="swiper-slide slide-item img-fluid" style={{ backgroundImage: `url(${image})` }}>
+                            <SwiperSlide key={index} className="swiper-slide slide-item img-fluid" >
                                 <div className="auto-container">
                                     <div className="content-box">
                                         <div className="content">

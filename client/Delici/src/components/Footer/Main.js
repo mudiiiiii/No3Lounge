@@ -66,7 +66,7 @@ function Main() {
                                         <li> <Link to="https://www.facebook.com">facebook</Link></li>
                                         <li> <Link to="https://www.instagram.com">instagram</Link></li>
                                         <li> <Link to="https://twitter.com">Twitter</Link></li>
-                                        <li> <Link to="https://www.youtube.com">Youtube</Link></li>
+                                        <li> <Link to="https://www.youtube.com/@NO3RESTOBAR">Youtube</Link></li>
                                         <li> <Link to="https://www.google.com/maps">Google map</Link></li>
                                     </ul>
                                 </div>
@@ -77,7 +77,11 @@ function Main() {
 
                 <div className="footer-bottom">
                     <div className="auto-container">
-                        <div className="copyright">&copy; 2024 No3 Lounge. All Rights Reserved   |    Crafted by <Link to="https://github.com/mudiiiiii" target="blank">Mudiaga Otojareri</Link> with template from <Link to="https://themeforest.net/user/kalanidhithemes" target="blank">Kalanidhi Themes</Link></div>
+                        <div className="copyright">&copy; 2024 No3 Restobar. All Rights Reserved </div>
+                        <div className="template-credit">
+                        Created by <Link to="https://github.com/mudiiiiii" target="blank">Mudiaga Otojareri</Link>  | Template from 
+        <a href="https://themeforest.net/user/kalanidhithemes" target="_blank" rel="noopener noreferrer"> Kalanidhi Themes</a>
+      </div>
                     </div>
                 </div>
 
