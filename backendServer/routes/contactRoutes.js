@@ -20,7 +20,7 @@ router.post('/contact', async (req, res) => {
   // Setup email data
   const mailOptions = {
     from: '"No3 Lounge" <admin@no3lounge.com>', // sender address
-    to: 'admin@no3lounge.com', // list of receivers
+    to: 'admin@no3lounge.com, info@no3lounge.com',  // list of receivers
     subject: 'New Contact Form Submission', // Subject line
     text: `You have a new contact form submission from ${name}.\n\nPhone: ${number}\nEmail: ${email}\nMessage: ${message}`, // plain text body
     html: `<p>You have a new contact form submission from <strong>${name}</strong>.</p>

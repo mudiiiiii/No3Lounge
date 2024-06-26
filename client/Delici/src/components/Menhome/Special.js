@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper.min.css';
-import menuimgone from '../../assets/images/03photos/desserts/cheesecake.jpg';
+import menuimgone from '../../assets/images/03photos/desserts/IMG_2258.jpeg';
 import menuimgtwo from '../../assets/images/03photos/food/1Z6A0697.jpg';
 import menuimgthree from '../../assets/images/03photos/food/1Z6A0729.jpg';
 import menuimgfour from '../../assets/images/03photos/food/1Z6A0787.jpg';
@@ -31,7 +31,7 @@ import menuimgtwentyfive from '../../assets/images/03photos/food/1Z6A1139.jpg';
 import menuimgtwentysix from '../../assets/images/03photos/drinks/1Z6A0918.jpg';
 import menuimgtwentyseven from '../../assets/images/03photos/food/1Z6A1146.jpg';
 import menuimgtwentyeight from '../../assets/images/03photos/drinks/1Z6A0945.jpg';
-import menuimgtwentynine from '../../assets/images/03photos/desserts/IMG_2258.jpeg';
+import menuimgtwentynine from '../../assets/images/03photos/desserts/cheesecake.jpg';
 import pdfFile from '../../assets/pdf/Full Pdf.pdf';
 
 
