@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper.min.css';
-import menuimgone from '../../assets/images/03photos/food/1Z6A1109.jpg';
+import menuimgone from '../../assets/images/03photos/desserts/cheesecake.jpg';
 import menuimgtwo from '../../assets/images/03photos/food/1Z6A0697.jpg';
 import menuimgthree from '../../assets/images/03photos/food/1Z6A0729.jpg';
 import menuimgfour from '../../assets/images/03photos/food/1Z6A0787.jpg';
@@ -26,12 +26,12 @@ import menuimgtwenty from '../../assets/images/03photos/drinks/1Z6A0836.jpg';
 import menuimgtwentyone from '../../assets/images/03photos/drinks/1Z6A0876.jpg';
 import menuimgtwentytwo from '../../assets/images/03photos/food/1Z6A1069.jpg';
 import menuimgtwentythree from '../../assets/images/03photos/food/1Z6A1092.jpg';
-import menuimgtwentyfour from '../../assets/images/03photos/food/1Z6A1114.jpg';
+import menuimgtwentyfour from '../../assets/images/03photos/desserts/IMG_9599.jpeg';
 import menuimgtwentyfive from '../../assets/images/03photos/food/1Z6A1139.jpg';
 import menuimgtwentysix from '../../assets/images/03photos/drinks/1Z6A0918.jpg';
 import menuimgtwentyseven from '../../assets/images/03photos/food/1Z6A1146.jpg';
 import menuimgtwentyeight from '../../assets/images/03photos/drinks/1Z6A0945.jpg';
-import menuimgtwentynine from '../../assets/images/03photos/drinks/1Z6A0988.jpg';
+import menuimgtwentynine from '../../assets/images/03photos/desserts/IMG_2258.jpeg';
 import pdfFile from '../../assets/pdf/Full Pdf.pdf';
 
 

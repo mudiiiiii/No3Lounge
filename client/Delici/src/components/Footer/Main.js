@@ -19,8 +19,8 @@ function Main() {
                                         <div className="info">
                                             <ul>
                                                 <li>#3 University Road, Akoka Lagos</li>
-                                                <li><Link to="mailto:booking@domainname.com">coming soon</Link></li>
-                                                <li><Link to="tel:+88-123-123456">Booking Request : +234-coming-soon</Link></li>
+                                                <li><Link to="mailto:info@no3lounge.com">info@no3lounge.com</Link></li>
+                                                <li><Link to="tel:+234 901 000 6669">Booking Request : +234 901 000 6669</Link></li>
                                                 <li>Open : 04:00 pm - 12:00 am</li>
                                             </ul>
                                         </div>
@@ -70,7 +70,7 @@ function Main() {
                                         <li> <Link to="https://www.google.com/maps">Google map</Link></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>

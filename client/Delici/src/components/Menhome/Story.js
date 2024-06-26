@@ -24,11 +24,11 @@ function Story() {
                                         <img src={require('../../assets/images/icons/separator.svg').default} alt='mySvgImage' />
                                     </div>
                                     <h2>Every Flavor Tells a Story</h2>
-                                    <div className="text">Perfect for party goers, fun seekers, and romantic date nighters. This yaba flagship spot is wonderfully sleek and provides an upbeat feel.</div>
+                                    <div className="text">Perfect for party goers, fun seekers, and romantic date nighters. This mainland flagship spot is wonderfully sleek and provides an upbeat feel.</div>
                                 </div>
                                 <div className="booking-info">
                                     <div className="bk-title">Book Through Call</div>
-                                    <div className="bk-no"><Link to="tel:+80-400-123456">+234-coming-soon</Link></div>
+                                    <div className="bk-no"><Link to="tel:+234 901 000 6669">+234 901 000 6669</Link></div>
                                     <div className="link-box">
                                         <Link to="/about" className="theme-btn btn-style-two clearfix">
                                             <span className="btn-wrap">

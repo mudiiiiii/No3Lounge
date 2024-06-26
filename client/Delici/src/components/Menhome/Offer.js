@@ -20,13 +20,13 @@ function Offer() {
     },
     {
       image: offerimg2,
-      title: 'Entree',
+      title: 'Entree & Dessert',
       link: `${entreepdf}#page=4`,
       internal: false
     },
     {
       image: offerimg3,
-      title: 'Desserts & Drinks',
+      title: 'Drinks',
       link: drinkpdf
     }
   ];

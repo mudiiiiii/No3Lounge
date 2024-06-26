@@ -56,8 +56,8 @@ function Contactbanner() {
                                 <div className="contactinfo-block col-lg-4 col-md-4 col-sm-12">
                                     <div className="inner-box cp-seprator wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                                         <h4>Contact Info</h4>
-                                        <div className="text">#3 University Road, Akoka Lagos<br />Email : coming soon</div>
-                                        <div className="more-link"><Link to="#">Booking : +234-coming-soon</Link></div>
+                                        <div className="text">#3 University Road, Akoka Lagos<br />Email : info@no3lounge.com</div>
+                                        <div className="more-link"><Link to="#">Booking : +234 901 000 6669</Link></div>
                                     </div>
                                 </div>
 
@@ -73,29 +73,35 @@ function Contactbanner() {
                             <div className="loc-block col-lg-6 col-md-12 col-sm-12">
                                 <div className="title-box centered">
                                     <h2>Message us</h2>
-                                    <div className="text desc">Have a question about the our service? We're here to help, contact us today</div>
+                                    <div className="text desc">Have a question about our service? We're here to help, contact us today</div>
                                 </div>
                                 <div className="default-form reservation-form">
                                 <form onSubmit={handleSubmit} encType="multipart/form-data">
-                                        <div className="clearfix">
-                                            <div className="form-group">
-                                                <div className="field-inner">
-                                                    <input type="text" name="name" placeholder="Your Name" required="" />
-                                                </div>
-                                            </div>
-                                            <div className="form-group">
-                                                <div className="field-inner">
-                                                    <input type="text" name="email" placeholder="Your Email" required="" />
-                                                </div>
-                                            </div>
-                                            <div className="form-group ">
-                                                <div className="field-inner">
-                                                    <input type="text" name="number" placeholder="Phone Number" required="" />
-                                                </div>
-                                            </div>
+                                <div className="clearfix">
+  <div className="form-group">
+    <div className="field-inner">
+      <i className="fas fa-user"></i>
+      <input type="text" name="name" placeholder="Your Name" required="" />
+    </div>
+  </div>
+  <div className="form-group">
+    <div className="field-inner">
+      <i className="fas fa-envelope"></i>
+      <input type="text" name="email" placeholder="Your Email" required="" />
+    </div>
+  </div>
+  <div className="form-group">
+    <div className="field-inner">
+      <i className="fas fa-phone"></i>
+      <input type="text" name="number" placeholder="Phone Number" required="" />
+    </div>
+  </div>
+
+
 
                                             <div className="form-group ">
                                                 <div className="field-inner">
+                                                <i className="fas fa-tasks"></i>
                                                     <textarea name="message" placeholder="Special Request" required=""></textarea>
                                                 </div>
                                             </div>

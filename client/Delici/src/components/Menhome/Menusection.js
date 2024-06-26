@@ -19,6 +19,10 @@ import eighteen from '../../assets/images/03photos/drinks/1Z6A0836.jpg'
 import nineteen from '../../assets/images/03photos/drinks/1Z6A0692.jpg'
 import twenty from '../../assets/images/03photos/drinks/1Z6A0876.jpg'
 import twentyone from '../../assets/images/03photos/drinks/1Z6A0945.jpg'
+import twentytwo from '../../assets/images/03photos/desserts/cheesecake.jpg'
+import twentythree from '../../assets/images/03photos/desserts/IMG_9552.jpeg'
+import twentyfour from '../../assets/images/03photos/desserts/IMG_9599.jpeg'
+import twentyfive from '../../assets/images/03photos/desserts/IMG_2258.jpeg'
 import pdfFile from '../../assets/pdf/Full Pdf.pdf';
 
 function Menusection() {
@@ -190,25 +194,24 @@ satay, wings, meat croquette, chicken croquette, and French fries.</Link></div>
 
                                         <div className="dish-block">
                                                 <div className="inner-box">
-                                                    {/* <div className="dish-image"><Link to="#"><img src={five} alt="" /></Link></div> */}
-                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">coming soon</Link></h5></div><div className="price"></div></div>
-                                                    <div className="text desc"><Link to="#">coming soon coming soon coming soon coming soon coming soon coming soon</Link></div>
+                                                    <div className="dish-image"><Link to="#"><img src={twentytwo} alt="" /></Link></div>
+                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">Cheese Cake</Link></h5></div><div className="price"></div></div>
                                                 </div>
                                             </div>
 
                                             <div className="dish-block">
                                                 <div className="inner-box">
-                                                    {/* <div className="dish-image"><Link to="#"><img src={six} alt="" /></Link></div> */}
-                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">coming soon </Link></h5></div><div className="price"></div></div>
-                                                    <div className="text desc"><Link to="#">coming soon coming soon coming soon coming soon coming soon coming soon</Link></div>
+                                                    <div className="dish-image"><Link to="#"><img src={twentythree} alt="" /></Link></div>
+                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">Fruit Tart </Link></h5></div><div className="price"></div></div>
+                                                    
                                                 </div>
                                             </div>
 
                                             <div className="dish-block">
                                                 <div className="inner-box">
-                                                    {/* <div className="dish-image"><Link to="#"><img src={seven} alt="" /></Link></div> */}
-                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">coming soon</Link></h5></div><div className="price"></div></div>
-                                                    <div className="text desc"><Link to="#">coming soon coming soon coming soon coming soon coming soon coming soon</Link></div>
+                                                    <div className="dish-image"><Link to="#"><img src={twentyfour} alt="" /></Link></div>
+                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">Carrot Cake</Link></h5></div><div className="price"></div></div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -218,15 +221,15 @@ satay, wings, meat croquette, chicken croquette, and French fries.</Link></div>
 
                                             <div className="dish-block">
                                                 <div className="inner-box">
-                                                    {/* <div className="dish-image"><Link to="#"><img src={eight} alt="" /></Link></div> */}
-                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">coming soon </Link></h5></div><div className="price"></div></div>
-                                                    <div className="text desc"><Link to="#">coming soon coming soon coming soon coming soon coming soon coming soon</Link></div>
+                                                    <div className="dish-image"><Link to="#"><img src={twentyfive} alt="" /></Link></div>
+                                                    <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">Red Velvet Cake </Link></h5></div><div className="price"></div></div>
+                                                    
                                                 </div>
                                             </div>
 
-                                            <div className="dish-block">
+                                            {/* <div className="dish-block">
                                                 <div className="inner-box">
-                                                    {/* <div className="dish-image"><Link to="#"><img src={nine} alt="" /></Link></div> */}
+                                                    
                                                     <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">coming soon</Link></h5></div><div className="price"></div></div>
                                                     <div className="text desc"><Link to="#">coming soon coming soon coming soon coming soon coming soon coming soon</Link></div>
                                                 </div>
@@ -234,11 +237,11 @@ satay, wings, meat croquette, chicken croquette, and French fries.</Link></div>
 
                                             <div className="dish-block">
                                                 <div className="inner-box">
-                                                    {/* <div className="dish-image"><Link to="#"><img src={ten} alt="" /></Link></div> */}
+                                               
                                                     <div className="title clearfix"><div className="ttl clearfix"><h5><Link to="#">coming soon</Link></h5></div><div className="price"></div></div>
                                                     <div className="text desc"><Link to="#">coming soon coming soon coming soon coming soon coming soon coming soon</Link></div>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -324,7 +327,7 @@ pineapple juice, blue curaçao</Link></div>
         <span className="text-two">view full menu</span>
     </span>
 </a>
-                            <Link to="https://no3lounge.africa.restaurant/" className="theme-btn btn-style-two clearfix">
+                            <Link to="https://no3lounge.africa.restaurant/" className="theme-btn btn-style-two clearfix" target="_blank"  rel='noopener noreferrer'>
                                 <span className="btn-wrap">
                                     <span className="text-one">order now</span>
                                     <span className="text-two">order now</span>

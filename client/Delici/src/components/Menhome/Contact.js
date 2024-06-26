@@ -126,7 +126,7 @@ function Contact() {
                   <div className="title">
                     <h2>Online Reservation</h2>
                     <div className="request-info">
-                      Booking request <Link to="#">+234-coming-soon</Link> or
+                      Booking request <Link to="+234 901 000 6669">+234 901 000 6669</Link> or
                       fill out the order form
                     </div>
                   </div>
@@ -135,7 +135,9 @@ function Contact() {
                       <div className="row clearfix">
                         <div className="form-group col-lg-6 col-md-6 col-sm-12">
                           <div className="field-inner">
+                          <span className="alt-icon far fa-user"></span>
                             <input
+                            className="l-icon"
                               type="text"
                               name="fieldname"
                               placeholder="Your Name"
@@ -145,7 +147,9 @@ function Contact() {
                         </div>
                         <div className="form-group col-lg-6 col-md-6 col-sm-12">
                           <div className="field-inner">
+                          <span className="alt-icon far fa-phone"></span>
                             <input
+                            className="l-icon"
                               type="text"
                               name="fieldname"
                               placeholder="Phone Number"
@@ -155,7 +159,9 @@ function Contact() {
                         </div>
                         <div className="form-group col-lg-6 col-md-6 col-sm-12">
                           <div className="field-inner">
+                          <span className="alt-icon far fa-envelope"></span>
                             <input
+                            className="l-icon"
                               type="text"
                               name="fieldname"
                               placeholder="Email Address"
@@ -187,7 +193,6 @@ function Contact() {
                         </div>
                         <div className="form-group col-lg-4 col-md-6 col-sm-12">
                 <div className="field-inner">
-                    {/* <span className="alt-icon far fa-calendar"></span> */}
                     <DatePicker 
                         selected={date} 
                         onChange={(newDate) => setDate(newDate)} 
@@ -256,7 +261,7 @@ function Contact() {
                     <div className="booking-info">
                       <div className="bk-title">Booking request</div>
                       <div className="bk-no">
-                        <Link to="tel:+88-123-123456">+234-coming-soon</Link>
+                        <Link to="tel:+234 901 000 6669">+234 901 000 6669</Link>
                       </div>
                     </div>
                     <div className="separator">

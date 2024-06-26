@@ -59,7 +59,7 @@ function Aboutsec() {
                                 <ul className="info">
                                     <li><strong>Opening Time</strong>Monday to Sunday <br />4.00 pm - 12.00am</li>
                                     <li className="separator"><span></span></li>
-                                    <li><strong>Contact Us</strong><span className="address">#3 University Road, Akoka Lagos</span> <Link to="tel:+88-123-123456">+234-coming-soon</Link> <br /><Link to="mailto:reservation@restro.com">coming soon</Link></li>
+                                    <li><strong>Contact Us</strong><span className="address">#3 University Road, Akoka Lagos</span> <Link to="tel:+234 901 000 6669">+234 901 000 6669</Link> <br /><Link to="info@no3lounge.com">info@no3lounge.com</Link></li>
                                 </ul>
                             </div>
                         </div>

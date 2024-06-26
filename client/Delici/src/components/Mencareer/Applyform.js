@@ -44,117 +44,128 @@ function Applyform() {
                   </div>
                 </div>
                 <div className="default-form reservation-form">
-                  <form onSubmit={handleSubmit} encType="multipart/form-data">
-                    <div className="clearfix">
-                      <div className="form-group">
-                        <div className="field-inner">
-                          <select name="job" required>
-                            <option value="">Select Position</option>
-                            <option value="manager">Assistant Manager</option>
-                            <option value="chef">Chef</option>
-                            <option value="waiter">Sous Chef</option>
-                            <option value="hostess">Waiter</option>
-                            <option value="bartender">Bartender</option>
-                          </select>
-                        </div>
-                      </div>
+                <form onSubmit={handleSubmit} encType="multipart/form-data">
+  <div className="clearfix">
+    <div className="form-group">
+      <div className="field-inner">
+        <i className="fas fa-briefcase"></i>
+        <select name="job" required>
+          <option value="">Select Position</option>
+          <option value="manager">Assistant Manager</option>
+          <option value="chef">Chef</option>
+          <option value="waiter">Sous Chef</option>
+          <option value="hostess">Waiter</option>
+          <option value="bartender">Bartender</option>
+        </select>
+      </div>
+    </div>
 
-                      <div className="form-group">
-                        <div className="field-inner">
-                          <input
-                            type="text"
-                            name="first_name"
-                            placeholder="Your First Name"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div className="form-group">
-                        <div className="field-inner">
-                          <input
-                            type="text"
-                            name="last_name"
-                            placeholder="Your Last Name"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div className="form-group">
-                        <div className="field-inner">
-                          <input
-                            type="email"
-                            name="email"
-                            placeholder="Your Email"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div className="form-group">
-                        <div className="field-inner">
-                          <input
-                            type="text"
-                            name="phone"
-                            placeholder="Phone Number"
-                            required
-                          />
-                        </div>
-                      </div>
+    <div className="form-group">
+      <div className="field-inner">
+        <i className="fas fa-user"></i>
+        <input
+          type="text"
+          name="first_name"
+          placeholder="Your First Name"
+          required
+        />
+      </div>
+    </div>
+    <div className="form-group">
+      <div className="field-inner">
+        <i className="fas fa-user"></i>
+        <input
+          type="text"
+          name="last_name"
+          placeholder="Your Last Name"
+          required
+        />
+      </div>
+    </div>
+    <div className="form-group">
+      <div className="field-inner">
+        <i className="fas fa-envelope"></i>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+    </div>
+    <div className="form-group">
+      <div className="field-inner">
+        <i className="fas fa-phone"></i>
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          required
+        />
+      </div>
+    </div>
 
-                      <div className="form-group experience-section">
-                        <h3 className="section-title">Professional Experience</h3>
-                        <div className="experience-block">
-                          <div className="field-inner">
-                            <label htmlFor="previous_role">Previous Role</label>
-                            <input
-                              type="text"
-                              id="previous_role"
-                              name="previous_role"
-                              placeholder="Previous Job Title"
-                              required
-                            />
-                          </div>
-                          <div className="field-inner">
-                            <label htmlFor="years_worked">Years Worked</label>
-                            <input
-                              type="number"
-                              id="years_worked"
-                              name="years_worked"
-                              placeholder="Number of Years"
-                              min="0"
-                              required
-                            />
-                          </div>
-                          <div className="field-inner">
-                            <label htmlFor="work_summary">Summary of Work</label>
-                            <textarea
-                              id="work_summary"
-                              name="work_summary"
-                              placeholder="Describe your responsibilities and achievements"
-                              required
-                            ></textarea>
-                          </div>
-                        </div>
-                      </div>
+    <div className="form-group experience-section">
+      <h3 className="section-title">Professional Experience</h3>
+      <div className="experience-block">
+        <div className="field-inner">
+          <label htmlFor="previous_role">Previous Role</label>
+          <i className="fas fa-briefcase"></i>
+          <input
+            type="text"
+            id="previous_role"
+            name="previous_role"
+            placeholder="Previous Job Title"
+            required
+          />
+        </div>
+        <div className="field-inner">
+          <label htmlFor="years_worked">Years Worked</label>
+          <i className="fas fa-calendar-alt"></i>
+          <input
+            type="number"
+            id="years_worked"
+            name="years_worked"
+            placeholder="Number of Years"
+            min="0"
+            required
+          />
+        </div>
+        <div className="field-inner">
+          <label htmlFor="work_summary">Summary of Work</label>
+          <i className="fas fa-tasks"></i>
+          <textarea
+            id="work_summary"
+            name="work_summary"
+            placeholder="Describe your responsibilities and achievements"
+            required
+          ></textarea>
+        </div>
+      </div>
+    </div>
 
-                      <div className="form-group">
-                        <div className="field-inner">
-                          <input type="file" name="cv" required />
-                          <label>Upload CV</label>
-                        </div>
-                      </div>
+    <div className="form-group">
+      <div className="field-inner">
+        <i className="fas fa-file-upload"></i>
+        <input type="file" name="cv" required />
+        <label>Upload CV</label>
+      </div>
+    </div>
 
-                      <div className="form-group">
-                        <button
-                          type="submit"
-                          className="theme-btn btn-style-one clearfix"
-                        >
-                          <span className="btn-wrap">
-                            <span className="text-one">Send Your Application</span>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
+    <div className="form-group">
+      <button
+        type="submit"
+        className="theme-btn btn-style-one clearfix"
+      >
+        <span className="btn-wrap">
+          <span className="text-one">Send Your Application</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</form>
+
+
                 </div>
               </div>
 

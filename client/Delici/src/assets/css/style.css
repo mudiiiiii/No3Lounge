@@ -201,10 +201,15 @@
   color: #ffffff; /* Lighter placeholder text for better readability */
 }
 
+
+.experience-section .field-inner #work_summary::placeholder {
+  color: #5a5a5a; 
+}
+
 .experience-section .field-inner input:focus,
 .experience-section .field-inner textarea:focus {
   outline: none;
-  border: 1px solid #d3d3d3; /* Light grey border when focused */
+  border: 1px solid #ffffff; /* Light grey border when focused */
 }
 
 .field-inner .custom-select-career {
@@ -241,6 +246,8 @@
 .field-inner .custom-select-career::-ms-expand {
   display: none; /* Removes default arrow icon in IE */
 }
+
+
 
 .feedback-container {
   display: flex;
@@ -291,6 +298,43 @@
   cursor: pointer;
 }
 
+
+.logo-img {
+  max-width: 150px; /* Adjust the width as needed */
+  max-height: 4000px; /* Adjust the height as needed */
+  height: 150px; /* Maintain the aspect ratio */
+  width: 150px; /* Maintain the aspect ratio */
+}
+
+textarea::placeholder {
+  font-style: italic;
+  color: rgb(85, 83, 83); /* or use a specific hex code like #808080 */
+}
+
+.field-inner textarea::placeholder {
+  font-style: italic;
+  color: rgb(78, 78, 78); /* or use a specific hex code like #808080 */
+}
+
+.field-inner textarea::-webkit-input-placeholder {
+  font-style: italic;
+  color: rgb(73, 73, 73);
+}
+
+.field-inner textarea::-moz-placeholder {
+  font-style: italic;
+  color: rgb(70, 70, 70);
+}
+
+.field-inner textarea:-ms-input-placeholder {
+  font-style: italic;
+  color: rgb(68, 68, 68);
+}
+
+.field-inner textarea::-ms-input-placeholder {
+  font-style: italic;
+  color: rgb(65, 64, 64);
+}
 
 
 
