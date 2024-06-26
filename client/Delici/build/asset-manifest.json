@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5c97d181.css",
-    "main.js": "/static/js/main.6ec584f3.js",
+    "main.js": "/static/js/main.92d3183a.js",
     "static/js/787.76d25a7e.chunk.js": "/static/js/787.76d25a7e.chunk.js",
     "static/media/Full Pdf.pdf": "/static/media/Full Pdf.f703be85424e4957e54e.pdf",
     "static/media/New Food menu 2024.pdf": "/static/media/New Food menu 2024.bcdc89ffdf0e42c8865c.pdf",
@@ -148,11 +148,11 @@
     "static/media/separator.svg": "/static/media/separator.fc5405c5995258e079d7072ed26a6975.svg",
     "index.html": "/index.html",
     "main.5c97d181.css.map": "/static/css/main.5c97d181.css.map",
-    "main.6ec584f3.js.map": "/static/js/main.6ec584f3.js.map",
+    "main.92d3183a.js.map": "/static/js/main.92d3183a.js.map",
     "787.76d25a7e.chunk.js.map": "/static/js/787.76d25a7e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c97d181.css",
-    "static/js/main.6ec584f3.js"
+    "static/js/main.92d3183a.js"
   ]
 }
