@@ -1691,7 +1691,34 @@ body.visible-sidebar{
     -o-transition:all 1000ms ease 1000ms;
     -moz-transition:all 1000ms ease 1000ms;
     transition:all 1000ms ease 1000ms;
+    color: rgb(255, 206, 122);
+    
 }
+.subtitle span {
+  color: rgb(255, 255, 255) /* Darker shade of the original color for subtitle */
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-section-coustm {
+  height: 100vh; /* or any desired height */
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+      background-size: cover;
+      background-position: center;
+  }
+
+  .banner-section-coustm {
+      height: 50vh; /* or any desired height for mobile */
+  }
+}
+
 
 .banner-section .slide-item .text{
   position: relative;
