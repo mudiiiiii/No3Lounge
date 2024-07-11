@@ -4,7 +4,7 @@ import AnimatedNumber from "animated-number-react"
 import Iframe from 'react-iframe';
 import bgten from '../../assets/images/background/bg-10.png'
 import bgeleven from '../../assets/images/background/bg-11.png'
-import signatureone from '../../assets/images/resource/signature-1.png'
+import signatureone from '../../assets/images/03photos/signature/signature1.png'
 import aboutimgone from '../../assets/images/03photos/food/1Z6A1059.jpg'
 import aboutimgtwo from '../../assets/images/03photos/logos/Wisemen Logo _White.png'
 
@@ -31,9 +31,9 @@ function Aboutsec() {
 
                         <div className="about-block content-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                             <div className="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                                <div className="text">Experience the feeling of <span className="theme_color">something special every time</span>. Our Menu is inspired by our desire to imagine and create memorable moments for you, our valued customer.</div>
-                                {/* <div className="signature"><img src={signatureone} alt="" title="" /></div> */}
-                                <div className="author">edward otojareri - director</div>
+                                <div className="text">Experience the feeling of <span className="theme_color">something special every time</span>. Our menu is inspired by our desire to imagine and create memorable moments for you, our valued customer.</div>
+                                <div className="signature"><img src={signatureone} alt="" title="" /></div>
+                                <div className="author">Management</div>
                                 <div className="video-box">
                                     <div className="image"><Link to="https://youtu.be/hSUz2ki6vwk" className="lightbox-image"><img src={aboutimgtwo} alt="" /></Link>
                                         <Link to="#" className="lightbox-image play-btn" onClick={() => setVideo(true)}>

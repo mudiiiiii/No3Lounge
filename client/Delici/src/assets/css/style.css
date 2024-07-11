@@ -1719,6 +1719,34 @@ body.visible-sidebar{
   }
 }
 
+.content-box {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+  border: 2px solid #000; /* Black border */
+  color: rgb(183, 158, 115); /* Darker shade of the original color for the text */
+}
+
+.subtitle span {
+  color: rgb(183, 158, 115); /* Darker shade of the original color for subtitle */
+}
+
+.banner-section-coustm {
+  height: 100vh; /* or any desired height */
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+      background-size: cover;
+      background-position: center;
+  }
+
+  .banner-section-coustm {
+      height: 50vh; /* or any desired height for mobile */
+  }
+}
+
 
 .banner-section .slide-item .text{
   position: relative;

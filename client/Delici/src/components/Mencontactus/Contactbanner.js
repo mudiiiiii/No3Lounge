@@ -33,7 +33,7 @@ function Contactbanner() {
     return (
         <>
             <div className="contact-map">
-                <Iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3964.0235196180947!2d3.3838336148358974!3d6.518706360090378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x103b8cfbe0dd4343%3A0x5dfece8f7a221bcd!2sUniversity%20Rd%2C%20Yaba%2C%20Lagos%20101245%2C%20Lagos%2C%20Nigeria!3m2!1d6.5177077!2d3.3842290999999998!5e0!3m2!1sen!2sca!4v1715819648149!5m2!1sen!2sca" width="100%" height="500" style="border:0;" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></Iframe>
+                <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.03567326086!2d3.37910417568!3d6.517168823235463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8cf8e2902ed7%3A0x8b3c3038395b0c2b!2s3%20University%20Rd%2C%20opposite%20First%20City%20Monument%20Bank%2C%20Yaba%2C%20Lagos%20101245%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sca!4v1720718553501!5m2!1sen!2sca" width="100%" height="600" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></Iframe>
             </div>
 
             <section className="contact-page">
