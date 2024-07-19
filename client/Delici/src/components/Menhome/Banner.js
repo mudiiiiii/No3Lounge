@@ -7,11 +7,9 @@ import Slideone from '../../assets/images/03photos/banners/slideone.jpg';
 import Slidefour from '../../assets/images/03photos/banners/slidefour.jpg';
 import Slidefive from '../../assets/images/03photos/banners/slidefive.jpg';
 import pdfFile from '../../assets/pdf/Full Pdf.pdf';
-import bookicon1 from '../../assets/images/resource/book-icon-1.png';
 import 'swiper/swiper.min.css';
 import SwiperCore, { Navigation } from 'swiper';
 import 'swiper/swiper.min.css';
-
 
 SwiperCore.use([Navigation]);
 
@@ -34,7 +32,7 @@ const adjustTextColor = (bgColor) => {
     }
 };
 
-const Banner = ({ slides, pdfFile }) => {
+const Banner = () => {
     useEffect(() => {
         adjustTextColor('rgb(228, 197, 144)'); 
     }, []);
