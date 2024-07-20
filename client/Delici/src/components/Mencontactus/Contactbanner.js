@@ -1,35 +1,57 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Iframe from 'react-iframe'
-import bg25 from '../../assets/images/03photos/logos/Wisemen Logo Black.png'
-// import bg6 from '../../assets/images/03'
-import restro from '../../assets/images/03photos/food/1Z6A1109.jpg'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Iframe from 'react-iframe';
+import bg25 from '../../assets/images/03photos/logos/Wisemen Logo Black.png';
+import restro from '../../assets/images/03photos/food/1Z6A1109.jpg';
 
 function Contactbanner() {
+    const [showModal, setShowModal] = useState(false);
+    const [modalMessage, setModalMessage] = useState('');
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData.entries());
-    
+
         try {
-          const response = await fetch('https://no3lounge-9eeef24429d5.herokuapp.com/api/contact', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-          });
-    
-          if (response.ok) {
-            alert('Your inquiry has been sent successfully!');
-          } else {
-            alert('Failed to send your inquiry.');
-          }
+            const response = await fetch('https://no3lounge-9eeef24429d5.herokuapp.com/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setModalMessage('Your inquiry has been sent successfully!');
+            } else {
+                setModalMessage('Failed to send your inquiry.');
+            }
         } catch (error) {
-          console.error('Error:', error);
-          alert('An error occurred while sending your inquiry.');
+            console.error('Error:', error);
+            setModalMessage('An error occurred while sending your inquiry.');
         }
-      };
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
+    // Inline Modal Component
+    const Modal = ({ show, message, onClose }) => {
+        if (!show) return null;
+        return (
+            <div className="modal-overlay">
+                <div className="modal-content">
+                    {/* <h2>Notification</h2> */}
+                    <p>{message}</p>
+                    <button onClick={onClose} className="close-button">Close</button>
+                </div>
+            </div>
+        );
+    };
+
     return (
         <>
             <div className="contact-map">
@@ -38,7 +60,6 @@ function Contactbanner() {
 
             <section className="contact-page">
                 <div className="left-bg"><img src={bg25} alt="" title="" /></div>
-                {/* <div className="right-bg"><img src={bg6} alt="" title="" /></div> */}
 
                 <div className="location-center">
                     <div className="auto-container">
@@ -51,7 +72,6 @@ function Contactbanner() {
                                         <div className="text"> Monday to Sunday <br /> 4.00 pm - 12.00am</div>
                                     </div>
                                 </div>
-
 
                                 <div className="contactinfo-block col-lg-4 col-md-4 col-sm-12">
                                     <div className="inner-box cp-seprator wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
@@ -76,36 +96,32 @@ function Contactbanner() {
                                     <div className="text desc">Have a question about our service? We're here to help, contact us today</div>
                                 </div>
                                 <div className="default-form reservation-form">
-                                <form onSubmit={handleSubmit} encType="multipart/form-data">
-                                <div className="clearfix">
-  <div className="form-group">
-    <div className="field-inner">
-      <i className="fas fa-user"></i>
-      <input type="text" name="name" placeholder="Your Name" required="" />
-    </div>
-  </div>
-  <div className="form-group">
-    <div className="field-inner">
-      <i className="fas fa-envelope"></i>
-      <input type="text" name="email" placeholder="Your Email" required="" />
-    </div>
-  </div>
-  <div className="form-group">
-    <div className="field-inner">
-      <i className="fas fa-phone"></i>
-      <input type="text" name="number" placeholder="Phone Number" required="" />
-    </div>
-  </div>
-
-
-
-                                            <div className="form-group ">
+                                    <form onSubmit={handleSubmit} encType="multipart/form-data">
+                                        <div className="clearfix">
+                                            <div className="form-group">
                                                 <div className="field-inner">
-                                                <i className="fas fa-tasks"></i>
+                                                    <i className="fas fa-user"></i>
+                                                    <input type="text" name="name" placeholder="Your Name" required="" />
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="field-inner">
+                                                    <i className="fas fa-envelope"></i>
+                                                    <input type="text" name="email" placeholder="Your Email" required="" />
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="field-inner">
+                                                    <i className="fas fa-phone"></i>
+                                                    <input type="text" name="number" placeholder="Phone Number" required="" />
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="field-inner">
+                                                    <i className="fas fa-tasks"></i>
                                                     <textarea name="message" placeholder="Special Request" required=""></textarea>
                                                 </div>
                                             </div>
-
                                             <div className="form-group">
                                                 <button type="submit" className="theme-btn btn-style-one clearfix">
                                                     <span className="btn-wrap">
@@ -119,7 +135,6 @@ function Contactbanner() {
                                 </div>
                             </div>
 
-
                             <div className="loc-block col-lg-6 col-md-12 col-sm-12">
                                 <img src={restro} alt="" />
                             </div>
@@ -127,10 +142,11 @@ function Contactbanner() {
                         </div>
                     </div>
                 </div>
-
             </section>
+
+            <Modal show={showModal} message={modalMessage} onClose={closeModal} />
         </>
-    )
+    );
 }
 
-export default Contactbanner
+export default Contactbanner;

@@ -9,6 +9,7 @@ import ny from '../../assets/images/resource/ny.png'
 
 function Book() {
     const [date, setDate] = useState('');  // State to hold the date input
+    const [showModal, setShowModal] = useState(false);
     const [message, setMessage] = useState('');
 
     const handleDateChange = (event) => {
@@ -32,8 +33,27 @@ function Book() {
         
     };
     const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent form from submitting
-        window.alert('Restaurant still under construction, please come back later.');
+        event.preventDefault();
+        setMessage('Restaurant still under construction, please come back later.');
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
+    // Inline Modal Component
+    const Modal = ({ show, message, onClose }) => {
+        if (!show) return null;
+        return (
+            <div className="modal-overlay">
+                <div className="modal-content">
+                    {/* <h2>N</h2> */}
+                    <p>{message}</p>
+                    <button onClick={onClose} className="close-button">Close</button>
+                </div>
+            </div>
+        );
     };
     return (
         <>
@@ -115,6 +135,7 @@ function Book() {
                           <div className="field-inner">
                           <span className="alt-icon far fa-user"></span>
                             <input
+                            className="l-icon"
                               type="text"
                               name="name"
                               placeholder="   Your Name"
@@ -126,6 +147,7 @@ function Book() {
                           <div className="field-inner">
                           <span className="alt-icon far fa-envelope"></span>
                             <input
+                            className="l-icon"
                               type="text"
                               name="emailAddress"
                               placeholder="   Email Address"
@@ -137,6 +159,7 @@ function Book() {
                           <div className="field-inner">
                           <span className="alt-icon far fa-phone"></span>
                             <input
+                            className="l-icon"
                               type="text"
                               name="phoneNumber"
                               placeholder="   Phone Number"
@@ -232,8 +255,10 @@ function Book() {
                         </div>
                     </div>
                 </div>
-
+                
+                <Modal show={showModal} message={message} onClose={closeModal} />
             </section>
+            
         </>
     )
 }

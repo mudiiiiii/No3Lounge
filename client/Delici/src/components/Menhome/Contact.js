@@ -10,285 +10,232 @@ import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
 
 SwiperCore.use([Controller]);
+
 function Contact() {
-  const swiper1 = useRef(null);
-  const swiper2 = useRef(null);
-  const [date, setDate] = useState(new Date());
+    const swiper1 = useRef(null);
+    const swiper2 = useRef(null);
+    const [date, setDate] = useState(new Date());
+    const [showModal, setShowModal] = useState(false);
+    const [message, setMessage] = useState('');
 
-  const [flag, setflag] = useState(false);
+    const [flag, setflag] = useState(false);
 
-  const slider2 = useRef();
-  const duration = 500;
-  const syncPosition = (e) => {
-    if (!flag) {
-      setflag(false);
-      if (slider2.current) {
-        slider2.current.to(e.item.index, duration);
-      }
-      setflag(false);
-    }
-  };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setMessage('Restaurant still under construction, please come back later.');
+        setShowModal(true);
+    };
 
- 
+    const closeModal = () => {
+        setShowModal(false);
+    };
 
-  return (
-    <>
-      <div className="testimonials-section">
-        <div
-          className="image-layer"
-          style={{ backgroundImage: `url(${Bgtwo})` }}
-        ></div>
-        <div className="auto-container">
-          {/* <div className="carousel-box owl-theme">
-                        <Swiper className="testi-top"
-                            ref={swiper1}
-                            controller={{ control: swiper2.current }}
-                            items={1} loop margin={10} autoplay onChange={(e) => syncPosition(e)}>
-                            <SwiperSlide className="slide-item">
-                                <div className="slide-content">
-                                    <div className="quotes">”</div>
-                                    <div className="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
-                                </div>
-                            </SwiperSlide >
-                            <SwiperSlide className="slide-item">
-                                <div className="slide-content">
-                                    <div className="quotes">”</div>
-                                    <div className="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
-                                </div>
-                            </SwiperSlide >
-                            <SwiperSlide className="slide-item">
-                                <div className="slide-content">
-                                    <div className="quotes">”</div>
-                                    <div className="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
-                                </div>
-                            </SwiperSlide >
-                            <SwiperSlide className="slide-item">
-                                <div className="slide-content">
-                                    <div className="quotes">”</div>
-                                    <div className="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
-                                </div>
-                            </SwiperSlide >
-                            <SwiperSlide className="slide-item">
-                                <div className="slide-content">
-                                    <div className="quotes">”</div>
-                                    <div className="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
-                                </div>
-                            </SwiperSlide >
-                            <SwiperSlide className="slide-item">
-                                <div className="slide-content">
-                                    <div className="quotes">”</div>
-                                    <div className="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
-                                </div>
-                            </SwiperSlide >
-                        </Swiper>
-                        <div className="separator"><span></span><span></span><span></span></div>
-                        <div className="thumbs-carousel-box">
-                            <Swiper className="testi-thumbs" loop={true} autoplay={true}>
-                                <SwiperSlide className="slide-item">
-                                    <div className="image">
-                                        <img src={author1} alt="" />
+    const slider2 = useRef();
+    const duration = 500;
+    const syncPosition = (e) => {
+        if (!flag) {
+            setflag(false);
+            if (slider2.current) {
+                slider2.current.to(e.item.index, duration);
+            }
+            setflag(false);
+        }
+    };
+
+    // Inline Modal Component
+    const Modal = ({ show, message, onClose }) => {
+        if (!show) return null;
+        return (
+            <div className="modal-overlay">
+                <div className="modal-content">
+                    <p>{message}</p>
+                    <button onClick={onClose} className="close-button">Close</button>
+                </div>
+            </div>
+        );
+    };
+
+    return (
+        <>
+            <div className="testimonials-section">
+                <div
+                    className="image-layer"
+                    style={{ backgroundImage: `url(${Bgtwo})` }}
+                ></div>
+                <div className="auto-container">
+                    {/* Testimonials carousel and other content here */}
+                </div>
+            </div>
+
+            <section className="reserve-section">
+                <div className="auto-container">
+                    <div className="outer-box">
+                        <div className="row clearfix">
+                            <div className="reserv-col col-lg-8 col-md-12 col-sm-12">
+                                <div className="inner">
+                                    <div className="title">
+                                        <h2>Online Reservation</h2>
+                                        <div className="request-info">
+                                            Booking request <Link to="+234 901 000 6669">+234 901 000 6669</Link> or
+                                            fill out the order form
+                                        </div>
                                     </div>
-                                    <div className="auth-title">Sam Jhonson</div>
-                                </SwiperSlide >
-                                <SwiperSlide className="slide-item">
-                                    <div className="image">
-                                        <img src={author2} alt="" /></div>
-                                    <div className="auth-title">Ian Botham</div>
-                                </SwiperSlide >
-                                <SwiperSlide className="slide-item">
-                                    <div className="image"><img src={author3} alt="" /></div>
-                                    <div className="auth-title">Dan Bitson</div>
-                                </SwiperSlide >
-                                <SwiperSlide className="slide-item">
-                                    <div className="image"><img src={author1} alt="" /></div>
-                                    <div className="auth-title">Sam Jhonson</div>
-                                </SwiperSlide >
-                                <SwiperSlide className="slide-item">
-                                    <div className="image"><img src={author2} alt="" /></div>
-                                    <div className="auth-title">Ian Botham</div>
-                                </SwiperSlide >
-                                <SwiperSlide className="slide-item">
-                                    <div className="image"><img src={author3} alt="" /></div>
-                                    <div className="auth-title">Dan Bitson</div>
-                                </SwiperSlide >
-                            </Swiper>
-                        </div> */}
-          {/* </div> */}
-        </div>
-      </div>
-
-      <section className="reserve-section">
-        <div className="auto-container">
-          <div className="outer-box">
-            <div className="row clearfix">
-              <div className="reserv-col col-lg-8 col-md-12 col-sm-12">
-                <div className="inner">
-                  <div className="title">
-                    <h2>Online Reservation</h2>
-                    <div className="request-info">
-                      Booking request <Link to="+234 901 000 6669">+234 901 000 6669</Link> or
-                      fill out the order form
+                                    <div className="default-form reservation-form">
+                                        <form onSubmit={handleSubmit}>
+                                            <div className="row clearfix">
+                                                <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <span className="alt-icon far fa-user"></span>
+                                                        <input
+                                                            className="l-icon"
+                                                            type="text"
+                                                            name="fieldname"
+                                                            placeholder="Your Name"
+                                                            required
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <span className="alt-icon far fa-phone"></span>
+                                                        <input
+                                                            className="l-icon"
+                                                            type="text"
+                                                            name="fieldname"
+                                                            placeholder="Phone Number"
+                                                            required
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group col-lg-6 col-md-6 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <span className="alt-icon far fa-envelope"></span>
+                                                        <input
+                                                            className="l-icon"
+                                                            type="text"
+                                                            name="fieldname"
+                                                            placeholder="Email Address"
+                                                            required
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group col-lg-4 col-md-6 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <span className="alt-icon far fa-user"></span>
+                                                        <select className="l-icon">
+                                                            <option>1 Person</option>
+                                                            <option>2 Person</option>
+                                                            <option>3 Person</option>
+                                                            <option>4 Person</option>
+                                                            <option>5 Person</option>
+                                                            <option>6 Person</option>
+                                                            <option>7 Person</option>
+                                                            <option>8 Person</option>
+                                                            <option>9 Person</option>
+                                                            <option>10 or more Person</option>
+                                                        </select>
+                                                        <span className="arrow-icon far fa-angle-down"></span>
+                                                    </div>
+                                                </div>
+                                                <div className="form-group col-lg-4 col-md-6 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <DatePicker
+                                                            selected={date}
+                                                            onChange={(newDate) => setDate(newDate)}
+                                                            dateFormat="dd-MM-yyyy"
+                                                            className="form-control"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="form-group col-lg-4 col-md-12 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <span className="alt-icon far fa-clock"></span>
+                                                        <select className="l-icon">
+                                                            <option>04 : 00 pm</option>
+                                                            <option>04 : 30 pm</option>
+                                                            <option>05 : 00 pm</option>
+                                                            <option>05 : 30 pm</option>
+                                                            <option>06 : 00 pm</option>
+                                                            <option>06 : 30 pm</option>
+                                                            <option>07 : 00 pm</option>
+                                                            <option>07 : 30 pm</option>
+                                                            <option>08 : 00 pm</option>
+                                                            <option>08 : 30 pm</option>
+                                                            <option>09 : 00 pm</option>
+                                                            <option>09 : 30 pm</option>
+                                                            <option>10 : 00 pm</option>
+                                                            <option>10 : 30 pm</option>
+                                                            <option>11 : 00 pm</option>
+                                                            <option>11 : 30 pm</option>
+                                                        </select>
+                                                        <span className="arrow-icon far fa-angle-down"></span>
+                                                    </div>
+                                                </div>
+                                                <div className="form-group col-lg-12 col-md-12 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <textarea
+                                                            name="fieldname"
+                                                            placeholder="Give us your details for your planned event, requirements, and any other information required."
+                                                            required
+                                                        ></textarea>
+                                                    </div>
+                                                </div>
+                                                <div className="form-group col-lg-12 col-md-12 col-sm-12">
+                                                    <div className="field-inner">
+                                                        <button
+                                                            type="submit"
+                                                            className="theme-btn btn-style-one clearfix"
+                                                        >
+                                                            <span className="btn-wrap">
+                                                                <span className="text-one">book a table</span>
+                                                                <span className="text-two">book a table</span>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="info-col col-lg-4 col-md-12 col-sm-12">
+                                <div className="inner">
+                                    <div className="title">
+                                        <h2>Contact Us</h2>
+                                    </div>
+                                    <div className="data">
+                                        <div className="booking-info">
+                                            <div className="bk-title">Booking request</div>
+                                            <div className="bk-no">
+                                                <Link to="tel:+234 901 000 6669">+234 901 000 6669</Link>
+                                            </div>
+                                        </div>
+                                        <div className="separator">
+                                            <span></span>
+                                        </div>
+                                        <ul className="info">
+                                            <li>
+                                                <strong>Location</strong>
+                                                <br />
+                                                #3 University Road, Akoka Lagos
+                                            </li>
+                                            <li>
+                                                <strong>Restaurant Time</strong>
+                                                <br />
+                                                Monday to Sunday <br />
+                                                4.00 pm - 12:00am
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div className="default-form reservation-form">
-                    <form method="post" action="/">
-                      <div className="row clearfix">
-                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
-                          <div className="field-inner">
-                          <span className="alt-icon far fa-user"></span>
-                            <input
-                            className="l-icon"
-                              type="text"
-                              name="fieldname"
-                              placeholder="Your Name"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
-                          <div className="field-inner">
-                          <span className="alt-icon far fa-phone"></span>
-                            <input
-                            className="l-icon"
-                              type="text"
-                              name="fieldname"
-                              placeholder="Phone Number"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
-                          <div className="field-inner">
-                          <span className="alt-icon far fa-envelope"></span>
-                            <input
-                            className="l-icon"
-                              type="text"
-                              name="fieldname"
-                              placeholder="Email Address"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div className="form-group col-lg-6 col-md-6 col-sm-12">
-                          <div className="field-inner">
-                          </div>
-                        </div>
-                        <div className="form-group col-lg-4 col-md-6 col-sm-12">
-                          <div className="field-inner">
-                            <span className="alt-icon far fa-user"></span>
-                            <select className="l-icon">
-                              <option>1 Person</option>
-                              <option>2 Person</option>
-                              <option>3 Person</option>
-                              <option>4 Person</option>
-                              <option>5 Person</option>
-                              <option>6 Person</option>
-                              <option>7 Person</option>
-                              <option>8 Person</option>
-                              <option>9 Person</option>
-                              <option>10 or more Person</option>
-                            </select>
-                            <span className="arrow-icon far fa-angle-down"></span>
-                          </div>
-                        </div>
-                        <div className="form-group col-lg-4 col-md-6 col-sm-12">
-                <div className="field-inner">
-                    <DatePicker 
-                        selected={date} 
-                        onChange={(newDate) => setDate(newDate)} 
-                        dateFormat="dd-MM-yyyy"
-                        className="form-control"
-                    />
                 </div>
-            </div>
-                        <div className="form-group col-lg-4 col-md-12 col-sm-12">
-                          <div className="field-inner">
-                            <span className="alt-icon far fa-clock"></span>
-                            <select className="l-icon">
-                              <option>04 : 00 pm</option>
-                              <option>04 : 30 pm</option>
-                              <option>05 : 00 pm</option>
-                              <option>05 : 30 pm</option>
-                              <option>06 : 00 pm</option>
-                              <option>06 : 30 pm</option>
-                              <option>07 : 00 pm</option>
-                              <option>07 : 30 pm</option>
-                              <option>08 : 00 pm</option>
-                              <option>08 : 30 pm</option>
-                              <option>09 : 00 pm</option>
-                              <option>09 : 30 pm</option>
-                              <option>10 : 00 pm</option>
-                              <option>10 : 30 pm</option>
-                              <option>11 : 00 pm</option>
-                              <option>11 : 30 pm</option>
-                            </select>
-                            <span className="arrow-icon far fa-angle-down"></span>
-                          </div>
-                        </div>
-                        <div className="form-group col-lg-12 col-md-12 col-sm-12">
-                          <div className="field-inner">
-                            <textarea
-                              name="fieldname"
-                              placeholder="Give us your details for your planned event, requirements, and any other information required."
-                              required
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div className="form-group col-lg-12 col-md-12 col-sm-12">
-                          <div className="field-inner">
-                            <button
-                              type="submit"
-                              className="theme-btn btn-style-one clearfix"
-                            >
-                              <span className="btn-wrap">
-                                <span className="text-one">book a table</span>
-                                <span className="text-two">book a table</span>
-                              </span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <div className="info-col col-lg-4 col-md-12 col-sm-12">
-                <div className="inner">
-                  <div className="title">
-                    <h2>Contact Us</h2>
-                  </div>
-                  <div className="data">
-                    <div className="booking-info">
-                      <div className="bk-title">Booking request</div>
-                      <div className="bk-no">
-                        <Link to="tel:+234 901 000 6669">+234 901 000 6669</Link>
-                      </div>
-                    </div>
-                    <div className="separator">
-                      <span></span>
-                    </div>
-                    <ul className="info">
-                      <li>
-                        <strong>Location</strong>
-                        <br />
-                        #3 University Road, Akoka Lagos
-                      </li>
-                      <li>
-                        <strong>Restaurant Time</strong>
-                        <br />
-                        Monday to Sunday <br />
-                        4.00 pm - 12:00am
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+                <Modal show={showModal} message={message} onClose={closeModal} />
+            </section>
+        </>
+    );
 }
 
 export default Contact;
